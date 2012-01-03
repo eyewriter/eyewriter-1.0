@@ -8,47 +8,47 @@
 
 /* Begin PBXBuildFile section */
 		0b2e55fee13134ce9b57d3bffd6d5dab /* ofxCvShortImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8a4dd23693dfab8ec05faa5d62c49d8c /* ofxCvShortImage.cpp */; };
-		119F52EC14B371D500FE1C92 /* calibrationFileSaver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 119F52E714B371D500FE1C92 /* calibrationFileSaver.cpp */; };
-		119F52ED14B371D500FE1C92 /* calibrationManager_controlPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 119F52E914B371D500FE1C92 /* calibrationManager_controlPanel.cpp */; };
-		119F52EE14B371D500FE1C92 /* pointFitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 119F52EA14B371D500FE1C92 /* pointFitter.cpp */; };
 		119F52F314B371DD00FE1C92 /* ofxLeastSquares.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 119F52F114B371DD00FE1C92 /* ofxLeastSquares.cpp */; };
 		134078e8f8f4f24368b31f26166fec03 /* ofxCvGrayscaleImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 057122a817d12571f8c0c7a4d522b879 /* ofxCvGrayscaleImage.cpp */; };
 		259da76c028adaa20996723e102a6ccd /* ofxCvColorImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ce9c7160245b19131dae61282ee6cb53 /* ofxCvColorImage.cpp */; };
 		7829c785a0dd56718cb46bcc3b066ff1 /* ofxCvHaarFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9a16cbf2e8cfe43af54fe6f55efbf8a4 /* ofxCvHaarFinder.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
-		E2338BDC147A5D2600173D89 /* calibrationManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2338927147A5D2500173D89 /* calibrationManager.cpp */; };
-		E2338C0C147A5D2600173D89 /* eyeTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2338BB5147A5D2600173D89 /* eyeTracker.cpp */; };
-		E2338C0D147A5D2600173D89 /* FitEllipse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2338BB7147A5D2600173D89 /* FitEllipse.cpp */; };
-		E2338C0E147A5D2600173D89 /* inputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2338BB9147A5D2600173D89 /* inputManager.cpp */; };
-		E2338C0F147A5D2600173D89 /* ofxCvGrayscaleAdvanced.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2338BBB147A5D2600173D89 /* ofxCvGrayscaleAdvanced.cpp */; };
-		E2338C10147A5D2600173D89 /* trackingManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2338BBD147A5D2600173D89 /* trackingManager.cpp */; };
 		E2338C13147A5D2600173D89 /* ofxControlPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2338BD7147A5D2600173D89 /* ofxControlPanel.cpp */; };
 		E2338C2A147A5DB600173D89 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2338C23147A5DB600173D89 /* tinyxml.cpp */; };
 		E2338C2B147A5DB600173D89 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2338C25147A5DB600173D89 /* tinyxmlerror.cpp */; };
 		E2338C2C147A5DB600173D89 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2338C26147A5DB600173D89 /* tinyxmlparser.cpp */; };
 		E2338C2D147A5DB600173D89 /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2338C28147A5DB600173D89 /* ofxXmlSettings.cpp */; };
-		E29B366F14B2377900007217 /* pongScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B366914B2377900007217 /* pongScene.cpp */; };
-		E29B367014B2377900007217 /* speak.m in Sources */ = {isa = PBXBuildFile; fileRef = E29B366C14B2377900007217 /* speak.m */; };
-		E29B367114B2377900007217 /* typingScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B366D14B2377900007217 /* typingScene.cpp */; };
-		E29B36D214B238C600007217 /* buttonRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B36C714B238C600007217 /* buttonRect.cpp */; };
-		E29B36D314B238C600007217 /* buttonStateManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B36CA14B238C600007217 /* buttonStateManager.cpp */; };
-		E29B36D414B238C600007217 /* buttonToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B36CC14B238C600007217 /* buttonToggle.cpp */; };
-		E29B36D514B238C600007217 /* buttonTrigger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B36CE14B238C600007217 /* buttonTrigger.cpp */; };
-		E29B36D914B239D300007217 /* baseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B36D714B239D300007217 /* baseScene.cpp */; };
-		E29B36DC14B239F400007217 /* eyePlotterTestApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B36DA14B239F400007217 /* eyePlotterTestApp.cpp */; };
-		E29B36E614B23A4D00007217 /* drawingScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B36DE14B23A4B00007217 /* drawingScene.cpp */; };
-		E29B36E714B23A4D00007217 /* manipulationScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B36E014B23A4C00007217 /* manipulationScene.cpp */; };
-		E29B36E814B23A4D00007217 /* saverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B36E214B23A4C00007217 /* saverScene.cpp */; };
-		E29B36E914B23A4D00007217 /* styleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B36E414B23A4C00007217 /* styleScene.cpp */; };
-		E29B36F714B23A6D00007217 /* groupCollection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B36EB14B23A6D00007217 /* groupCollection.cpp */; };
-		E29B36F814B23A6D00007217 /* stroke.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B36ED14B23A6D00007217 /* stroke.cpp */; };
-		E29B36F914B23A6D00007217 /* strokeGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B36EF14B23A6D00007217 /* strokeGroup.cpp */; };
-		E29B36FA14B23A6D00007217 /* strokePoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B36F114B23A6D00007217 /* strokePoint.cpp */; };
-		E29B36FB14B23A6D00007217 /* strokeThumbnails.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B36F314B23A6D00007217 /* strokeThumbnails.cpp */; };
-		E29B36FC14B23A6D00007217 /* strokeUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B36F514B23A6D00007217 /* strokeUtils.cpp */; };
-		E29B370414B23A8C00007217 /* colorPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B36FE14B23A8C00007217 /* colorPicker.cpp */; };
-		E29B370514B23A8C00007217 /* groupStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B370014B23A8C00007217 /* groupStyle.cpp */; };
-		E29B370614B23A8C00007217 /* renderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E29B370214B23A8C00007217 /* renderManager.cpp */; };
+		E28FC7EA14B397EB00C62C04 /* buttonRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7A514B397EB00C62C04 /* buttonRect.cpp */; };
+		E28FC7EB14B397EB00C62C04 /* buttonStateManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7A814B397EB00C62C04 /* buttonStateManager.cpp */; };
+		E28FC7EC14B397EB00C62C04 /* buttonToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7AA14B397EB00C62C04 /* buttonToggle.cpp */; };
+		E28FC7ED14B397EB00C62C04 /* buttonTrigger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7AC14B397EB00C62C04 /* buttonTrigger.cpp */; };
+		E28FC7EE14B397EB00C62C04 /* baseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7AF14B397EB00C62C04 /* baseScene.cpp */; };
+		E28FC7EF14B397EB00C62C04 /* drawingScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7B314B397EB00C62C04 /* drawingScene.cpp */; };
+		E28FC7F014B397EB00C62C04 /* manipulationScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7B514B397EB00C62C04 /* manipulationScene.cpp */; };
+		E28FC7F114B397EB00C62C04 /* groupCollection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7B814B397EB00C62C04 /* groupCollection.cpp */; };
+		E28FC7F214B397EB00C62C04 /* stroke.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7BA14B397EB00C62C04 /* stroke.cpp */; };
+		E28FC7F314B397EB00C62C04 /* strokeGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7BC14B397EB00C62C04 /* strokeGroup.cpp */; };
+		E28FC7F414B397EB00C62C04 /* strokePoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7BE14B397EB00C62C04 /* strokePoint.cpp */; };
+		E28FC7F514B397EB00C62C04 /* strokeThumbnails.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7C014B397EB00C62C04 /* strokeThumbnails.cpp */; };
+		E28FC7F614B397EB00C62C04 /* strokeUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7C214B397EB00C62C04 /* strokeUtils.cpp */; };
+		E28FC7F714B397EB00C62C04 /* styleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7C414B397EB00C62C04 /* styleScene.cpp */; };
+		E28FC7F814B397EB00C62C04 /* colorPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7C714B397EB00C62C04 /* colorPicker.cpp */; };
+		E28FC7F914B397EB00C62C04 /* groupStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7C914B397EB00C62C04 /* groupStyle.cpp */; };
+		E28FC7FA14B397EB00C62C04 /* renderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7CB14B397EB00C62C04 /* renderManager.cpp */; };
+		E28FC7FB14B397EB00C62C04 /* eyePlotterTestApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7CD14B397EB00C62C04 /* eyePlotterTestApp.cpp */; };
+		E28FC7FC14B397EB00C62C04 /* pongScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7CF14B397EB00C62C04 /* pongScene.cpp */; };
+		E28FC7FD14B397EB00C62C04 /* saverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7D114B397EB00C62C04 /* saverScene.cpp */; };
+		E28FC7FE14B397EB00C62C04 /* speak.m in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7D414B397EB00C62C04 /* speak.m */; };
+		E28FC7FF14B397EB00C62C04 /* typingScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7D514B397EB00C62C04 /* typingScene.cpp */; };
+		E28FC80014B397EB00C62C04 /* calibrationFileSaver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7D914B397EB00C62C04 /* calibrationFileSaver.cpp */; };
+		E28FC80114B397EB00C62C04 /* calibrationManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7DB14B397EB00C62C04 /* calibrationManager.cpp */; };
+		E28FC80214B397EB00C62C04 /* calibrationManager_controlPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7DD14B397EB00C62C04 /* calibrationManager_controlPanel.cpp */; };
+		E28FC80314B397EB00C62C04 /* pointFitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7DE14B397EB00C62C04 /* pointFitter.cpp */; };
+		E28FC80414B397EB00C62C04 /* eyeTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7E014B397EB00C62C04 /* eyeTracker.cpp */; };
+		E28FC80514B397EB00C62C04 /* FitEllipse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7E214B397EB00C62C04 /* FitEllipse.cpp */; };
+		E28FC80614B397EB00C62C04 /* inputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7E414B397EB00C62C04 /* inputManager.cpp */; };
+		E28FC80714B397EB00C62C04 /* ofxCvGrayscaleAdvanced.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7E614B397EB00C62C04 /* ofxCvGrayscaleAdvanced.cpp */; };
+		E28FC80814B397EB00C62C04 /* trackingManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7E814B397EB00C62C04 /* trackingManager.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
 		E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
@@ -102,11 +102,6 @@
 
 /* Begin PBXFileReference section */
 		057122a817d12571f8c0c7a4d522b879 /* ofxCvGrayscaleImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxCvGrayscaleImage.cpp; path = ../../../addons/ofxOpenCv/src/ofxCvGrayscaleImage.cpp; sourceTree = SOURCE_ROOT; };
-		119F52E714B371D500FE1C92 /* calibrationFileSaver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = calibrationFileSaver.cpp; sourceTree = "<group>"; };
-		119F52E814B371D500FE1C92 /* calibrationFileSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calibrationFileSaver.h; sourceTree = "<group>"; };
-		119F52E914B371D500FE1C92 /* calibrationManager_controlPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = calibrationManager_controlPanel.cpp; sourceTree = "<group>"; };
-		119F52EA14B371D500FE1C92 /* pointFitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pointFitter.cpp; sourceTree = "<group>"; };
-		119F52EB14B371D500FE1C92 /* pointFitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pointFitter.h; sourceTree = "<group>"; };
 		119F52F114B371DD00FE1C92 /* ofxLeastSquares.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLeastSquares.cpp; sourceTree = "<group>"; };
 		119F52F214B371DD00FE1C92 /* ofxLeastSquares.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLeastSquares.h; sourceTree = "<group>"; };
 		3c232045833313b99efe0b14840b6108 /* ofxCvMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxCvMain.h; path = ../../../addons/ofxOpenCv/src/ofxCvMain.h; sourceTree = SOURCE_ROOT; };
@@ -118,18 +113,6 @@
 		9a048549f08c6dffa79e6def6eeedb50 /* ofxCvGrayscaleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxCvGrayscaleImage.h; path = ../../../addons/ofxOpenCv/src/ofxCvGrayscaleImage.h; sourceTree = SOURCE_ROOT; };
 		9a16cbf2e8cfe43af54fe6f55efbf8a4 /* ofxCvHaarFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxCvHaarFinder.cpp; path = ../../../addons/ofxOpenCv/src/ofxCvHaarFinder.cpp; sourceTree = SOURCE_ROOT; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
-		E2338927147A5D2500173D89 /* calibrationManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = calibrationManager.cpp; sourceTree = "<group>"; };
-		E2338928147A5D2500173D89 /* calibrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calibrationManager.h; sourceTree = "<group>"; };
-		E2338BB5147A5D2600173D89 /* eyeTracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eyeTracker.cpp; sourceTree = "<group>"; };
-		E2338BB6147A5D2600173D89 /* eyeTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eyeTracker.h; sourceTree = "<group>"; };
-		E2338BB7147A5D2600173D89 /* FitEllipse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FitEllipse.cpp; sourceTree = "<group>"; };
-		E2338BB8147A5D2600173D89 /* FitEllipse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitEllipse.h; sourceTree = "<group>"; };
-		E2338BB9147A5D2600173D89 /* inputManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = inputManager.cpp; sourceTree = "<group>"; };
-		E2338BBA147A5D2600173D89 /* inputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inputManager.h; sourceTree = "<group>"; };
-		E2338BBB147A5D2600173D89 /* ofxCvGrayscaleAdvanced.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCvGrayscaleAdvanced.cpp; sourceTree = "<group>"; };
-		E2338BBC147A5D2600173D89 /* ofxCvGrayscaleAdvanced.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCvGrayscaleAdvanced.h; sourceTree = "<group>"; };
-		E2338BBD147A5D2600173D89 /* trackingManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = trackingManager.cpp; sourceTree = "<group>"; };
-		E2338BBE147A5D2600173D89 /* trackingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trackingManager.h; sourceTree = "<group>"; };
 		E2338BC6147A5D2600173D89 /* guiBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = guiBaseObject.h; sourceTree = "<group>"; };
 		E2338BC7147A5D2600173D89 /* guiColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = guiColor.h; sourceTree = "<group>"; };
 		E2338BC8147A5D2600173D89 /* guiCustomImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = guiCustomImpl.h; sourceTree = "<group>"; };
@@ -172,52 +155,69 @@
 		E2338C30147A5DE000173D89 /* Instructions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Instructions.txt; sourceTree = "<group>"; };
 		E2338C31147A5DE000173D89 /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
 		E2338C33147A5DE000173D89 /* ofxDirList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxDirList.h; sourceTree = "<group>"; };
-		E29B366914B2377900007217 /* pongScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pongScene.cpp; sourceTree = "<group>"; };
-		E29B366A14B2377900007217 /* pongScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pongScene.h; sourceTree = "<group>"; };
-		E29B366B14B2377900007217 /* speak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = speak.h; sourceTree = "<group>"; };
-		E29B366C14B2377900007217 /* speak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = speak.m; sourceTree = "<group>"; };
-		E29B366D14B2377900007217 /* typingScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = typingScene.cpp; sourceTree = "<group>"; };
-		E29B366E14B2377900007217 /* typingScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = typingScene.h; sourceTree = "<group>"; };
-		E29B36C714B238C600007217 /* buttonRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = buttonRect.cpp; sourceTree = "<group>"; };
-		E29B36C814B238C600007217 /* buttonRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonRect.h; sourceTree = "<group>"; };
-		E29B36C914B238C600007217 /* buttonState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonState.h; sourceTree = "<group>"; };
-		E29B36CA14B238C600007217 /* buttonStateManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = buttonStateManager.cpp; sourceTree = "<group>"; };
-		E29B36CB14B238C600007217 /* buttonStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonStateManager.h; sourceTree = "<group>"; };
-		E29B36CC14B238C600007217 /* buttonToggle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = buttonToggle.cpp; sourceTree = "<group>"; };
-		E29B36CD14B238C600007217 /* buttonToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonToggle.h; sourceTree = "<group>"; };
-		E29B36CE14B238C600007217 /* buttonTrigger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = buttonTrigger.cpp; sourceTree = "<group>"; };
-		E29B36CF14B238C600007217 /* buttonTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonTrigger.h; sourceTree = "<group>"; };
-		E29B36D714B239D300007217 /* baseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = baseScene.cpp; sourceTree = "<group>"; };
-		E29B36D814B239D300007217 /* baseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseScene.h; sourceTree = "<group>"; };
-		E29B36DA14B239F400007217 /* eyePlotterTestApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eyePlotterTestApp.cpp; sourceTree = "<group>"; };
-		E29B36DB14B239F400007217 /* eyePlotterTestApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eyePlotterTestApp.h; sourceTree = "<group>"; };
-		E29B36DD14B23A2F00007217 /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
-		E29B36DE14B23A4B00007217 /* drawingScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = drawingScene.cpp; sourceTree = "<group>"; };
-		E29B36DF14B23A4B00007217 /* drawingScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawingScene.h; sourceTree = "<group>"; };
-		E29B36E014B23A4C00007217 /* manipulationScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = manipulationScene.cpp; sourceTree = "<group>"; };
-		E29B36E114B23A4C00007217 /* manipulationScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manipulationScene.h; sourceTree = "<group>"; };
-		E29B36E214B23A4C00007217 /* saverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = saverScene.cpp; sourceTree = "<group>"; };
-		E29B36E314B23A4C00007217 /* saverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = saverScene.h; sourceTree = "<group>"; };
-		E29B36E414B23A4C00007217 /* styleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = styleScene.cpp; sourceTree = "<group>"; };
-		E29B36E514B23A4D00007217 /* styleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = styleScene.h; sourceTree = "<group>"; };
-		E29B36EB14B23A6D00007217 /* groupCollection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = groupCollection.cpp; sourceTree = "<group>"; };
-		E29B36EC14B23A6D00007217 /* groupCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = groupCollection.h; sourceTree = "<group>"; };
-		E29B36ED14B23A6D00007217 /* stroke.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stroke.cpp; sourceTree = "<group>"; };
-		E29B36EE14B23A6D00007217 /* stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stroke.h; sourceTree = "<group>"; };
-		E29B36EF14B23A6D00007217 /* strokeGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strokeGroup.cpp; sourceTree = "<group>"; };
-		E29B36F014B23A6D00007217 /* strokeGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strokeGroup.h; sourceTree = "<group>"; };
-		E29B36F114B23A6D00007217 /* strokePoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strokePoint.cpp; sourceTree = "<group>"; };
-		E29B36F214B23A6D00007217 /* strokePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strokePoint.h; sourceTree = "<group>"; };
-		E29B36F314B23A6D00007217 /* strokeThumbnails.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strokeThumbnails.cpp; sourceTree = "<group>"; };
-		E29B36F414B23A6D00007217 /* strokeThumbnails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strokeThumbnails.h; sourceTree = "<group>"; };
-		E29B36F514B23A6D00007217 /* strokeUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strokeUtils.cpp; sourceTree = "<group>"; };
-		E29B36F614B23A6D00007217 /* strokeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strokeUtils.h; sourceTree = "<group>"; };
-		E29B36FE14B23A8C00007217 /* colorPicker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = colorPicker.cpp; sourceTree = "<group>"; };
-		E29B36FF14B23A8C00007217 /* colorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colorPicker.h; sourceTree = "<group>"; };
-		E29B370014B23A8C00007217 /* groupStyle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = groupStyle.cpp; sourceTree = "<group>"; };
-		E29B370114B23A8C00007217 /* groupStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = groupStyle.h; sourceTree = "<group>"; };
-		E29B370214B23A8C00007217 /* renderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = renderManager.cpp; sourceTree = "<group>"; };
-		E29B370314B23A8C00007217 /* renderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = renderManager.h; sourceTree = "<group>"; };
+		E28FC7A514B397EB00C62C04 /* buttonRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = buttonRect.cpp; sourceTree = "<group>"; };
+		E28FC7A614B397EB00C62C04 /* buttonRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonRect.h; sourceTree = "<group>"; };
+		E28FC7A714B397EB00C62C04 /* buttonState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonState.h; sourceTree = "<group>"; };
+		E28FC7A814B397EB00C62C04 /* buttonStateManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = buttonStateManager.cpp; sourceTree = "<group>"; };
+		E28FC7A914B397EB00C62C04 /* buttonStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonStateManager.h; sourceTree = "<group>"; };
+		E28FC7AA14B397EB00C62C04 /* buttonToggle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = buttonToggle.cpp; sourceTree = "<group>"; };
+		E28FC7AB14B397EB00C62C04 /* buttonToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonToggle.h; sourceTree = "<group>"; };
+		E28FC7AC14B397EB00C62C04 /* buttonTrigger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = buttonTrigger.cpp; sourceTree = "<group>"; };
+		E28FC7AD14B397EB00C62C04 /* buttonTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonTrigger.h; sourceTree = "<group>"; };
+		E28FC7AF14B397EB00C62C04 /* baseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = baseScene.cpp; sourceTree = "<group>"; };
+		E28FC7B014B397EB00C62C04 /* baseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseScene.h; sourceTree = "<group>"; };
+		E28FC7B214B397EB00C62C04 /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
+		E28FC7B314B397EB00C62C04 /* drawingScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = drawingScene.cpp; sourceTree = "<group>"; };
+		E28FC7B414B397EB00C62C04 /* drawingScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawingScene.h; sourceTree = "<group>"; };
+		E28FC7B514B397EB00C62C04 /* manipulationScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = manipulationScene.cpp; sourceTree = "<group>"; };
+		E28FC7B614B397EB00C62C04 /* manipulationScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manipulationScene.h; sourceTree = "<group>"; };
+		E28FC7B814B397EB00C62C04 /* groupCollection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = groupCollection.cpp; sourceTree = "<group>"; };
+		E28FC7B914B397EB00C62C04 /* groupCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = groupCollection.h; sourceTree = "<group>"; };
+		E28FC7BA14B397EB00C62C04 /* stroke.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stroke.cpp; sourceTree = "<group>"; };
+		E28FC7BB14B397EB00C62C04 /* stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stroke.h; sourceTree = "<group>"; };
+		E28FC7BC14B397EB00C62C04 /* strokeGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strokeGroup.cpp; sourceTree = "<group>"; };
+		E28FC7BD14B397EB00C62C04 /* strokeGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strokeGroup.h; sourceTree = "<group>"; };
+		E28FC7BE14B397EB00C62C04 /* strokePoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strokePoint.cpp; sourceTree = "<group>"; };
+		E28FC7BF14B397EB00C62C04 /* strokePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strokePoint.h; sourceTree = "<group>"; };
+		E28FC7C014B397EB00C62C04 /* strokeThumbnails.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strokeThumbnails.cpp; sourceTree = "<group>"; };
+		E28FC7C114B397EB00C62C04 /* strokeThumbnails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strokeThumbnails.h; sourceTree = "<group>"; };
+		E28FC7C214B397EB00C62C04 /* strokeUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strokeUtils.cpp; sourceTree = "<group>"; };
+		E28FC7C314B397EB00C62C04 /* strokeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strokeUtils.h; sourceTree = "<group>"; };
+		E28FC7C414B397EB00C62C04 /* styleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = styleScene.cpp; sourceTree = "<group>"; };
+		E28FC7C514B397EB00C62C04 /* styleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = styleScene.h; sourceTree = "<group>"; };
+		E28FC7C714B397EB00C62C04 /* colorPicker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = colorPicker.cpp; sourceTree = "<group>"; };
+		E28FC7C814B397EB00C62C04 /* colorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colorPicker.h; sourceTree = "<group>"; };
+		E28FC7C914B397EB00C62C04 /* groupStyle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = groupStyle.cpp; sourceTree = "<group>"; };
+		E28FC7CA14B397EB00C62C04 /* groupStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = groupStyle.h; sourceTree = "<group>"; };
+		E28FC7CB14B397EB00C62C04 /* renderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = renderManager.cpp; sourceTree = "<group>"; };
+		E28FC7CC14B397EB00C62C04 /* renderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = renderManager.h; sourceTree = "<group>"; };
+		E28FC7CD14B397EB00C62C04 /* eyePlotterTestApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eyePlotterTestApp.cpp; sourceTree = "<group>"; };
+		E28FC7CE14B397EB00C62C04 /* eyePlotterTestApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eyePlotterTestApp.h; sourceTree = "<group>"; };
+		E28FC7CF14B397EB00C62C04 /* pongScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pongScene.cpp; sourceTree = "<group>"; };
+		E28FC7D014B397EB00C62C04 /* pongScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pongScene.h; sourceTree = "<group>"; };
+		E28FC7D114B397EB00C62C04 /* saverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = saverScene.cpp; sourceTree = "<group>"; };
+		E28FC7D214B397EB00C62C04 /* saverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = saverScene.h; sourceTree = "<group>"; };
+		E28FC7D314B397EB00C62C04 /* speak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = speak.h; sourceTree = "<group>"; };
+		E28FC7D414B397EB00C62C04 /* speak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = speak.m; sourceTree = "<group>"; };
+		E28FC7D514B397EB00C62C04 /* typingScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = typingScene.cpp; sourceTree = "<group>"; };
+		E28FC7D614B397EB00C62C04 /* typingScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = typingScene.h; sourceTree = "<group>"; };
+		E28FC7D914B397EB00C62C04 /* calibrationFileSaver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = calibrationFileSaver.cpp; sourceTree = "<group>"; };
+		E28FC7DA14B397EB00C62C04 /* calibrationFileSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calibrationFileSaver.h; sourceTree = "<group>"; };
+		E28FC7DB14B397EB00C62C04 /* calibrationManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = calibrationManager.cpp; sourceTree = "<group>"; };
+		E28FC7DC14B397EB00C62C04 /* calibrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calibrationManager.h; sourceTree = "<group>"; };
+		E28FC7DD14B397EB00C62C04 /* calibrationManager_controlPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = calibrationManager_controlPanel.cpp; sourceTree = "<group>"; };
+		E28FC7DE14B397EB00C62C04 /* pointFitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pointFitter.cpp; sourceTree = "<group>"; };
+		E28FC7DF14B397EB00C62C04 /* pointFitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pointFitter.h; sourceTree = "<group>"; };
+		E28FC7E014B397EB00C62C04 /* eyeTracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eyeTracker.cpp; sourceTree = "<group>"; };
+		E28FC7E114B397EB00C62C04 /* eyeTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eyeTracker.h; sourceTree = "<group>"; };
+		E28FC7E214B397EB00C62C04 /* FitEllipse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FitEllipse.cpp; sourceTree = "<group>"; };
+		E28FC7E314B397EB00C62C04 /* FitEllipse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitEllipse.h; sourceTree = "<group>"; };
+		E28FC7E414B397EB00C62C04 /* inputManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = inputManager.cpp; sourceTree = "<group>"; };
+		E28FC7E514B397EB00C62C04 /* inputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inputManager.h; sourceTree = "<group>"; };
+		E28FC7E614B397EB00C62C04 /* ofxCvGrayscaleAdvanced.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCvGrayscaleAdvanced.cpp; sourceTree = "<group>"; };
+		E28FC7E714B397EB00C62C04 /* ofxCvGrayscaleAdvanced.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCvGrayscaleAdvanced.h; sourceTree = "<group>"; };
+		E28FC7E814B397EB00C62C04 /* trackingManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = trackingManager.cpp; sourceTree = "<group>"; };
+		E28FC7E914B397EB00C62C04 /* trackingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trackingManager.h; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
 		E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
@@ -327,57 +327,6 @@
 				BBAB23BE13894E4700AA2426 /* GLUT.framework */,
 			);
 			name = "3rd party frameworks";
-			sourceTree = "<group>";
-		};
-		E22D6BC814B2B8EE00B1F99D /* eyePlotterScenes */ = {
-			isa = PBXGroup;
-			children = (
-				E29B36FD14B23A8C00007217 /* styling */,
-				E29B36EA14B23A6D00007217 /* strokes */,
-				E29B36DE14B23A4B00007217 /* drawingScene.cpp */,
-				E29B36DF14B23A4B00007217 /* drawingScene.h */,
-				E29B36E014B23A4C00007217 /* manipulationScene.cpp */,
-				E29B36E114B23A4C00007217 /* manipulationScene.h */,
-				E29B36E214B23A4C00007217 /* saverScene.cpp */,
-				E29B36E314B23A4C00007217 /* saverScene.h */,
-				E29B36E414B23A4C00007217 /* styleScene.cpp */,
-				E29B36E514B23A4D00007217 /* styleScene.h */,
-				E29B36DD14B23A2F00007217 /* defines.h */,
-			);
-			name = eyePlotterScenes;
-			sourceTree = "<group>";
-		};
-		E2338926147A5D2500173D89 /* calibration */ = {
-			isa = PBXGroup;
-			children = (
-				E2338927147A5D2500173D89 /* calibrationManager.cpp */,
-				E2338928147A5D2500173D89 /* calibrationManager.h */,
-				119F52E714B371D500FE1C92 /* calibrationFileSaver.cpp */,
-				119F52E814B371D500FE1C92 /* calibrationFileSaver.h */,
-				119F52E914B371D500FE1C92 /* calibrationManager_controlPanel.cpp */,
-				119F52EA14B371D500FE1C92 /* pointFitter.cpp */,
-				119F52EB14B371D500FE1C92 /* pointFitter.h */,
-			);
-			name = calibration;
-			path = ../calibration;
-			sourceTree = "<group>";
-		};
-		E2338BB4147A5D2600173D89 /* tracking */ = {
-			isa = PBXGroup;
-			children = (
-				E2338926147A5D2500173D89 /* calibration */,
-				E2338BB5147A5D2600173D89 /* eyeTracker.cpp */,
-				E2338BB6147A5D2600173D89 /* eyeTracker.h */,
-				E2338BB7147A5D2600173D89 /* FitEllipse.cpp */,
-				E2338BB8147A5D2600173D89 /* FitEllipse.h */,
-				E2338BB9147A5D2600173D89 /* inputManager.cpp */,
-				E2338BBA147A5D2600173D89 /* inputManager.h */,
-				E2338BBB147A5D2600173D89 /* ofxCvGrayscaleAdvanced.cpp */,
-				E2338BBC147A5D2600173D89 /* ofxCvGrayscaleAdvanced.h */,
-				E2338BBD147A5D2600173D89 /* trackingManager.cpp */,
-				E2338BBE147A5D2600173D89 /* trackingManager.h */,
-			);
-			path = tracking;
 			sourceTree = "<group>";
 		};
 		E2338BBF147A5D2600173D89 /* utils */ = {
@@ -502,74 +451,120 @@
 			path = src;
 			sourceTree = "<group>";
 		};
-		E29B366814B2377900007217 /* scenes */ = {
+		E28FC7A414B397EB00C62C04 /* buttons */ = {
 			isa = PBXGroup;
 			children = (
-				E22D6BC814B2B8EE00B1F99D /* eyePlotterScenes */,
-				E29B36DA14B239F400007217 /* eyePlotterTestApp.cpp */,
-				E29B36DB14B239F400007217 /* eyePlotterTestApp.h */,
-				E29B366C14B2377900007217 /* speak.m */,
-				E29B366B14B2377900007217 /* speak.h */,
-				E29B36D714B239D300007217 /* baseScene.cpp */,
-				E29B36D814B239D300007217 /* baseScene.h */,
-				E29B366914B2377900007217 /* pongScene.cpp */,
-				E29B366A14B2377900007217 /* pongScene.h */,
-				E29B366D14B2377900007217 /* typingScene.cpp */,
-				E29B366E14B2377900007217 /* typingScene.h */,
+				E28FC7A514B397EB00C62C04 /* buttonRect.cpp */,
+				E28FC7A614B397EB00C62C04 /* buttonRect.h */,
+				E28FC7A714B397EB00C62C04 /* buttonState.h */,
+				E28FC7A814B397EB00C62C04 /* buttonStateManager.cpp */,
+				E28FC7A914B397EB00C62C04 /* buttonStateManager.h */,
+				E28FC7AA14B397EB00C62C04 /* buttonToggle.cpp */,
+				E28FC7AB14B397EB00C62C04 /* buttonToggle.h */,
+				E28FC7AC14B397EB00C62C04 /* buttonTrigger.cpp */,
+				E28FC7AD14B397EB00C62C04 /* buttonTrigger.h */,
 			);
-			name = scenes;
-			path = otherScenes;
+			path = buttons;
 			sourceTree = "<group>";
 		};
-		E29B36C614B238C600007217 /* buttons */ = {
+		E28FC7AE14B397EB00C62C04 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
-				E29B36C714B238C600007217 /* buttonRect.cpp */,
-				E29B36C814B238C600007217 /* buttonRect.h */,
-				E29B36C914B238C600007217 /* buttonState.h */,
-				E29B36CA14B238C600007217 /* buttonStateManager.cpp */,
-				E29B36CB14B238C600007217 /* buttonStateManager.h */,
-				E29B36CC14B238C600007217 /* buttonToggle.cpp */,
-				E29B36CD14B238C600007217 /* buttonToggle.h */,
-				E29B36CE14B238C600007217 /* buttonTrigger.cpp */,
-				E29B36CF14B238C600007217 /* buttonTrigger.h */,
+				E28FC7AF14B397EB00C62C04 /* baseScene.cpp */,
+				E28FC7B014B397EB00C62C04 /* baseScene.h */,
+				E28FC7B114B397EB00C62C04 /* eyePlotter */,
+				E28FC7CD14B397EB00C62C04 /* eyePlotterTestApp.cpp */,
+				E28FC7CE14B397EB00C62C04 /* eyePlotterTestApp.h */,
+				E28FC7CF14B397EB00C62C04 /* pongScene.cpp */,
+				E28FC7D014B397EB00C62C04 /* pongScene.h */,
+				E28FC7D114B397EB00C62C04 /* saverScene.cpp */,
+				E28FC7D214B397EB00C62C04 /* saverScene.h */,
+				E28FC7D314B397EB00C62C04 /* speak.h */,
+				E28FC7D414B397EB00C62C04 /* speak.m */,
+				E28FC7D514B397EB00C62C04 /* typingScene.cpp */,
+				E28FC7D614B397EB00C62C04 /* typingScene.h */,
 			);
-			name = buttons;
-			path = gui;
+			path = scenes;
 			sourceTree = "<group>";
 		};
-		E29B36EA14B23A6D00007217 /* strokes */ = {
+		E28FC7B114B397EB00C62C04 /* eyePlotter */ = {
 			isa = PBXGroup;
 			children = (
-				E29B36EB14B23A6D00007217 /* groupCollection.cpp */,
-				E29B36EC14B23A6D00007217 /* groupCollection.h */,
-				E29B36ED14B23A6D00007217 /* stroke.cpp */,
-				E29B36EE14B23A6D00007217 /* stroke.h */,
-				E29B36EF14B23A6D00007217 /* strokeGroup.cpp */,
-				E29B36F014B23A6D00007217 /* strokeGroup.h */,
-				E29B36F114B23A6D00007217 /* strokePoint.cpp */,
-				E29B36F214B23A6D00007217 /* strokePoint.h */,
-				E29B36F314B23A6D00007217 /* strokeThumbnails.cpp */,
-				E29B36F414B23A6D00007217 /* strokeThumbnails.h */,
-				E29B36F514B23A6D00007217 /* strokeUtils.cpp */,
-				E29B36F614B23A6D00007217 /* strokeUtils.h */,
+				E28FC7B214B397EB00C62C04 /* defines.h */,
+				E28FC7B314B397EB00C62C04 /* drawingScene.cpp */,
+				E28FC7B414B397EB00C62C04 /* drawingScene.h */,
+				E28FC7B514B397EB00C62C04 /* manipulationScene.cpp */,
+				E28FC7B614B397EB00C62C04 /* manipulationScene.h */,
+				E28FC7B714B397EB00C62C04 /* strokes */,
+				E28FC7C414B397EB00C62C04 /* styleScene.cpp */,
+				E28FC7C514B397EB00C62C04 /* styleScene.h */,
+				E28FC7C614B397EB00C62C04 /* styling */,
 			);
-			name = strokes;
-			path = ../strokes;
+			path = eyePlotter;
 			sourceTree = "<group>";
 		};
-		E29B36FD14B23A8C00007217 /* styling */ = {
+		E28FC7B714B397EB00C62C04 /* strokes */ = {
 			isa = PBXGroup;
 			children = (
-				E29B36FE14B23A8C00007217 /* colorPicker.cpp */,
-				E29B36FF14B23A8C00007217 /* colorPicker.h */,
-				E29B370014B23A8C00007217 /* groupStyle.cpp */,
-				E29B370114B23A8C00007217 /* groupStyle.h */,
-				E29B370214B23A8C00007217 /* renderManager.cpp */,
-				E29B370314B23A8C00007217 /* renderManager.h */,
+				E28FC7B814B397EB00C62C04 /* groupCollection.cpp */,
+				E28FC7B914B397EB00C62C04 /* groupCollection.h */,
+				E28FC7BA14B397EB00C62C04 /* stroke.cpp */,
+				E28FC7BB14B397EB00C62C04 /* stroke.h */,
+				E28FC7BC14B397EB00C62C04 /* strokeGroup.cpp */,
+				E28FC7BD14B397EB00C62C04 /* strokeGroup.h */,
+				E28FC7BE14B397EB00C62C04 /* strokePoint.cpp */,
+				E28FC7BF14B397EB00C62C04 /* strokePoint.h */,
+				E28FC7C014B397EB00C62C04 /* strokeThumbnails.cpp */,
+				E28FC7C114B397EB00C62C04 /* strokeThumbnails.h */,
+				E28FC7C214B397EB00C62C04 /* strokeUtils.cpp */,
+				E28FC7C314B397EB00C62C04 /* strokeUtils.h */,
 			);
-			name = styling;
-			path = ../styling;
+			path = strokes;
+			sourceTree = "<group>";
+		};
+		E28FC7C614B397EB00C62C04 /* styling */ = {
+			isa = PBXGroup;
+			children = (
+				E28FC7C714B397EB00C62C04 /* colorPicker.cpp */,
+				E28FC7C814B397EB00C62C04 /* colorPicker.h */,
+				E28FC7C914B397EB00C62C04 /* groupStyle.cpp */,
+				E28FC7CA14B397EB00C62C04 /* groupStyle.h */,
+				E28FC7CB14B397EB00C62C04 /* renderManager.cpp */,
+				E28FC7CC14B397EB00C62C04 /* renderManager.h */,
+			);
+			path = styling;
+			sourceTree = "<group>";
+		};
+		E28FC7D714B397EB00C62C04 /* tracking */ = {
+			isa = PBXGroup;
+			children = (
+				E28FC7D814B397EB00C62C04 /* calibration */,
+				E28FC7E014B397EB00C62C04 /* eyeTracker.cpp */,
+				E28FC7E114B397EB00C62C04 /* eyeTracker.h */,
+				E28FC7E214B397EB00C62C04 /* FitEllipse.cpp */,
+				E28FC7E314B397EB00C62C04 /* FitEllipse.h */,
+				E28FC7E414B397EB00C62C04 /* inputManager.cpp */,
+				E28FC7E514B397EB00C62C04 /* inputManager.h */,
+				E28FC7E614B397EB00C62C04 /* ofxCvGrayscaleAdvanced.cpp */,
+				E28FC7E714B397EB00C62C04 /* ofxCvGrayscaleAdvanced.h */,
+				E28FC7E814B397EB00C62C04 /* trackingManager.cpp */,
+				E28FC7E914B397EB00C62C04 /* trackingManager.h */,
+			);
+			path = tracking;
+			sourceTree = "<group>";
+		};
+		E28FC7D814B397EB00C62C04 /* calibration */ = {
+			isa = PBXGroup;
+			children = (
+				E28FC7D914B397EB00C62C04 /* calibrationFileSaver.cpp */,
+				E28FC7DA14B397EB00C62C04 /* calibrationFileSaver.h */,
+				E28FC7DB14B397EB00C62C04 /* calibrationManager.cpp */,
+				E28FC7DC14B397EB00C62C04 /* calibrationManager.h */,
+				E28FC7DD14B397EB00C62C04 /* calibrationManager_controlPanel.cpp */,
+				E28FC7DE14B397EB00C62C04 /* pointFitter.cpp */,
+				E28FC7DF14B397EB00C62C04 /* pointFitter.h */,
+			);
+			path = calibration;
 			sourceTree = "<group>";
 		};
 		E4328144138ABC890047C5CB /* Products */ = {
@@ -605,9 +600,9 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				E29B36C614B238C600007217 /* buttons */,
-				E29B366814B2377900007217 /* scenes */,
-				E2338BB4147A5D2600173D89 /* tracking */,
+				E28FC7A414B397EB00C62C04 /* buttons */,
+				E28FC7AE14B397EB00C62C04 /* scenes */,
+				E28FC7D714B397EB00C62C04 /* tracking */,
 				E2338BBF147A5D2600173D89 /* utils */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
@@ -751,43 +746,43 @@
 				dbf87635ae30aae223f0609e6ee16e2f /* ofxCvImage.cpp in Sources */,
 				7829c785a0dd56718cb46bcc3b066ff1 /* ofxCvHaarFinder.cpp in Sources */,
 				0b2e55fee13134ce9b57d3bffd6d5dab /* ofxCvShortImage.cpp in Sources */,
-				E2338BDC147A5D2600173D89 /* calibrationManager.cpp in Sources */,
-				E2338C0C147A5D2600173D89 /* eyeTracker.cpp in Sources */,
-				E2338C0D147A5D2600173D89 /* FitEllipse.cpp in Sources */,
-				E2338C0E147A5D2600173D89 /* inputManager.cpp in Sources */,
-				E2338C0F147A5D2600173D89 /* ofxCvGrayscaleAdvanced.cpp in Sources */,
-				E2338C10147A5D2600173D89 /* trackingManager.cpp in Sources */,
 				E2338C13147A5D2600173D89 /* ofxControlPanel.cpp in Sources */,
 				E2338C2A147A5DB600173D89 /* tinyxml.cpp in Sources */,
 				E2338C2B147A5DB600173D89 /* tinyxmlerror.cpp in Sources */,
 				E2338C2C147A5DB600173D89 /* tinyxmlparser.cpp in Sources */,
 				E2338C2D147A5DB600173D89 /* ofxXmlSettings.cpp in Sources */,
-				E29B366F14B2377900007217 /* pongScene.cpp in Sources */,
-				E29B367014B2377900007217 /* speak.m in Sources */,
-				E29B367114B2377900007217 /* typingScene.cpp in Sources */,
-				E29B36D214B238C600007217 /* buttonRect.cpp in Sources */,
-				E29B36D314B238C600007217 /* buttonStateManager.cpp in Sources */,
-				E29B36D414B238C600007217 /* buttonToggle.cpp in Sources */,
-				E29B36D514B238C600007217 /* buttonTrigger.cpp in Sources */,
-				E29B36D914B239D300007217 /* baseScene.cpp in Sources */,
-				E29B36DC14B239F400007217 /* eyePlotterTestApp.cpp in Sources */,
-				E29B36E614B23A4D00007217 /* drawingScene.cpp in Sources */,
-				E29B36E714B23A4D00007217 /* manipulationScene.cpp in Sources */,
-				E29B36E814B23A4D00007217 /* saverScene.cpp in Sources */,
-				E29B36E914B23A4D00007217 /* styleScene.cpp in Sources */,
-				E29B36F714B23A6D00007217 /* groupCollection.cpp in Sources */,
-				E29B36F814B23A6D00007217 /* stroke.cpp in Sources */,
-				E29B36F914B23A6D00007217 /* strokeGroup.cpp in Sources */,
-				E29B36FA14B23A6D00007217 /* strokePoint.cpp in Sources */,
-				E29B36FB14B23A6D00007217 /* strokeThumbnails.cpp in Sources */,
-				E29B36FC14B23A6D00007217 /* strokeUtils.cpp in Sources */,
-				E29B370414B23A8C00007217 /* colorPicker.cpp in Sources */,
-				E29B370514B23A8C00007217 /* groupStyle.cpp in Sources */,
-				E29B370614B23A8C00007217 /* renderManager.cpp in Sources */,
-				119F52EC14B371D500FE1C92 /* calibrationFileSaver.cpp in Sources */,
-				119F52ED14B371D500FE1C92 /* calibrationManager_controlPanel.cpp in Sources */,
-				119F52EE14B371D500FE1C92 /* pointFitter.cpp in Sources */,
 				119F52F314B371DD00FE1C92 /* ofxLeastSquares.cpp in Sources */,
+				E28FC7EA14B397EB00C62C04 /* buttonRect.cpp in Sources */,
+				E28FC7EB14B397EB00C62C04 /* buttonStateManager.cpp in Sources */,
+				E28FC7EC14B397EB00C62C04 /* buttonToggle.cpp in Sources */,
+				E28FC7ED14B397EB00C62C04 /* buttonTrigger.cpp in Sources */,
+				E28FC7EE14B397EB00C62C04 /* baseScene.cpp in Sources */,
+				E28FC7EF14B397EB00C62C04 /* drawingScene.cpp in Sources */,
+				E28FC7F014B397EB00C62C04 /* manipulationScene.cpp in Sources */,
+				E28FC7F114B397EB00C62C04 /* groupCollection.cpp in Sources */,
+				E28FC7F214B397EB00C62C04 /* stroke.cpp in Sources */,
+				E28FC7F314B397EB00C62C04 /* strokeGroup.cpp in Sources */,
+				E28FC7F414B397EB00C62C04 /* strokePoint.cpp in Sources */,
+				E28FC7F514B397EB00C62C04 /* strokeThumbnails.cpp in Sources */,
+				E28FC7F614B397EB00C62C04 /* strokeUtils.cpp in Sources */,
+				E28FC7F714B397EB00C62C04 /* styleScene.cpp in Sources */,
+				E28FC7F814B397EB00C62C04 /* colorPicker.cpp in Sources */,
+				E28FC7F914B397EB00C62C04 /* groupStyle.cpp in Sources */,
+				E28FC7FA14B397EB00C62C04 /* renderManager.cpp in Sources */,
+				E28FC7FB14B397EB00C62C04 /* eyePlotterTestApp.cpp in Sources */,
+				E28FC7FC14B397EB00C62C04 /* pongScene.cpp in Sources */,
+				E28FC7FD14B397EB00C62C04 /* saverScene.cpp in Sources */,
+				E28FC7FE14B397EB00C62C04 /* speak.m in Sources */,
+				E28FC7FF14B397EB00C62C04 /* typingScene.cpp in Sources */,
+				E28FC80014B397EB00C62C04 /* calibrationFileSaver.cpp in Sources */,
+				E28FC80114B397EB00C62C04 /* calibrationManager.cpp in Sources */,
+				E28FC80214B397EB00C62C04 /* calibrationManager_controlPanel.cpp in Sources */,
+				E28FC80314B397EB00C62C04 /* pointFitter.cpp in Sources */,
+				E28FC80414B397EB00C62C04 /* eyeTracker.cpp in Sources */,
+				E28FC80514B397EB00C62C04 /* FitEllipse.cpp in Sources */,
+				E28FC80614B397EB00C62C04 /* inputManager.cpp in Sources */,
+				E28FC80714B397EB00C62C04 /* ofxCvGrayscaleAdvanced.cpp in Sources */,
+				E28FC80814B397EB00C62C04 /* trackingManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
