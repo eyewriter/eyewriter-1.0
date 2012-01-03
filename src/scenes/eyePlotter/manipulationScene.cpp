@@ -38,47 +38,47 @@ void manipulationScene::setup(){
 	drawableButtons.push_back(&selectZoom);
 	
 	rotateLeft.setup("ROTATE LEFT", 200, 20, 140, 100);
-	rotateLeft.setMaxCounter(16.0);
+	//rotateLeft.setMaxCounter(16.0);
 	rotateLeft.setRetrigger(true);
 	
 	rotateRight.setup("ROTATE RIGHT", 360, 20, 140, 100);
-	rotateRight.setMaxCounter(16.0);
+	//rotateRight.setMaxCounter(16.0);
 	rotateRight.setRetrigger(true);
 
 	zoomIn.setup("ZOOM IN", 200, 20, 140, 100);
-	zoomIn.setMaxCounter(23.0);
+	//zoomIn.setMaxCounter(23.0);
 	zoomIn.setRetrigger(true);
 	
 	zoomOut.setup("ZOOM OUT", 360, 20, 140, 100);
-	zoomOut.setMaxCounter(23.0);
+	//zoomOut.setMaxCounter(23.0);
 	zoomOut.setRetrigger(true);
 
 	shiftUp.setup("SHIFT UP", 680, 20, 140, 100);
-	shiftUp.setMaxCounter(16.0);
+	//shiftUp.setMaxCounter(16.0);
 	shiftUp.setRetrigger(true);
 
 	shiftDown.setup("SHIFT DOWN", 860, 20, 140, 100);
-	shiftDown.setMaxCounter(16.0);
+	//shiftDown.setMaxCounter(16.0);
 	shiftDown.setRetrigger(true);
 	
 	shiftLeft.setup("SHIFT LEFT", 200, 20, 140, 100);
-	shiftLeft.setMaxCounter(16.0);
+	//shiftLeft.setMaxCounter(16.0);
 	shiftLeft.setRetrigger(true);
 
 	shiftRight.setup("SHIFT RIGHT", 360, 20, 140, 100);
-	shiftRight.setMaxCounter(16.0);
+	//shiftRight.setMaxCounter(16.0);
 	shiftRight.setRetrigger(true);
 	
 	selectLeft.setup("< SELECT LETTER", 200, 20, 140, 100);
-	selectLeft.setMaxCounter(buttonCount * 2);
+	//selectLeft.setMaxCounter(buttonCount * 2);
 	selectLeft.setRetrigger(true);
 
 	selectRight.setup("SELECT LETTER >", 360, 20, 140, 100);
-	selectRight.setMaxCounter(buttonCount * 2);
+	//selectRight.setMaxCounter(buttonCount * 2);
 	selectRight.setRetrigger(true);	
 	
 	autoPlace.setup("AUTO PLACE", 860, 20, 140, 100);
-	autoPlace.setMaxCounter(buttonCount * 3);
+	//autoPlace.setMaxCounter(buttonCount * 3);
 	autoPlace.setRetrigger(true);	
 
 	showAll		= true;

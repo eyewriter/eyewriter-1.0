@@ -48,60 +48,60 @@ void styleScene::setup(){
 	drawableButtons.push_back(&outlineOptions);
 	
 	selectLeft.setup("< SELECT LETTER", 200, 20, 140, 100);
-	selectLeft.setMaxCounter(buttonCount * 1.5);
+	//selectLeft.setMaxCounter(buttonCount * 1.5);
 	selectLeft.setRetrigger(true);
 
 	selectRight.setup("SELECT LETTER >", 360, 20, 140, 100);
-	selectRight.setMaxCounter(buttonCount * 1.5);
+	//selectRight.setMaxCounter(buttonCount * 1.5);
 	selectRight.setRetrigger(true);	
 	
 	strokeDown.setup("< STROKE", 200, 20, 140, 100);
-	strokeDown.setMaxCounter(buttonCount * 2);
+	//strokeDown.setMaxCounter(buttonCount * 2);
 	strokeDown.setRetrigger(true);
 	
 	strokeUp.setup("STROKE > ", 360, 20, 140, 100);
-	strokeUp.setMaxCounter(buttonCount * 2);
+	//strokeUp.setMaxCounter(buttonCount * 2);
 	strokeUp.setRetrigger(true);
 	
 	brush.setup("BRUSH", 710, 20, 140, 100);
-	brush.setMaxCounter(buttonCount * 2);
+	//brush.setMaxCounter(buttonCount * 2);
 	brush.setRetrigger(true);
 	
 	toggleFill.setup("FILL","NO FILL", false, 200, 20, 140, 100);
-	toggleFill.setMaxCounter(buttonCount * 2);
+	//toggleFill.setMaxCounter(buttonCount * 2);
 	
 	toggleHoles.setup("HOLES","NO HOLES", false, 350, 20, 140, 100);
-	toggleHoles.setMaxCounter(buttonCount * 2);
+	//toggleHoles.setMaxCounter(buttonCount * 2);
 	
 	lighting.setup("LIGHTING","NO LIGHTING", false, 710, 20, 140, 100);
-	lighting.setMaxCounter(buttonCount * 2);
+	//lighting.setMaxCounter(buttonCount * 2);
 	
 	hashes.setup("HASH","NO HASH", false, 560, 20, 140, 100);
-	hashes.setMaxCounter(buttonCount * 2);
+	//hashes.setMaxCounter(buttonCount * 2);
 
 	shadowLeft.setup("< SHADOW", 200, 80, 110, 60);
-	shadowLeft.setMaxCounter(buttonCount * 2);
+	//shadowLeft.setMaxCounter(buttonCount * 2);
 	shadowLeft.setRetrigger(true);	
 	
 	shadowRight.setup("SHADOW >", 360, 80, 110, 60);
-	shadowRight.setMaxCounter(buttonCount * 2);
+	//shadowRight.setMaxCounter(buttonCount * 2);
 	shadowRight.setRetrigger(true);	
 	
 	shadowUp.setup("^ SHADOW", 280, 10, 110, 60);
-	shadowUp.setMaxCounter(buttonCount * 2);
+	//shadowUp.setMaxCounter(buttonCount * 2);
 	shadowUp.setRetrigger(true);	
 	
 	shadowDown.setup("v SHADOW", 280, 150, 110, 60);
-	shadowDown.setMaxCounter(buttonCount * 2);
+	//shadowDown.setMaxCounter(buttonCount * 2);
 	shadowDown.setRetrigger(true);	
 	
 	
 	outlineDown.setup("< OUTLINE", 200, 20, 140, 100);
-	outlineDown.setMaxCounter(buttonCount * 2);
+	//outlineDown.setMaxCounter(buttonCount * 2);
 	outlineDown.setRetrigger(true);
 	
 	outlineUp.setup("OUTLINE > ", 360, 20, 140, 100);
-	outlineUp.setMaxCounter(buttonCount * 2);
+	//outlineUp.setMaxCounter(buttonCount * 2);
 	outlineUp.setRetrigger(true);
 	
 	pickColor.setup("COLOR","COLOR", false, 860, 20, 140, 100);
@@ -117,7 +117,7 @@ void styleScene::setup(){
 	my = 0.0;
 	
 	for(int i = 0; i < drawableButtons.size(); i++){
-		((buttonTrigger *)drawableButtons[i])->setMaxCounter(buttonCount);
+		//((buttonTrigger *)drawableButtons[i])->setMaxCounter(buttonCount);
 	}
 
 	testState = BUTTON_NONE;
@@ -131,8 +131,8 @@ void styleScene::update(float mouseX, float mouseY){
 	}
 
 	
-	selectRight.setMaxCounter(buttonCount * 2);
-	selectLeft.setMaxCounter(buttonCount * 2);
+	//selectRight.setMaxCounter(buttonCount * 2);
+	//selectLeft.setMaxCounter(buttonCount * 2);
 	
 	mx = mouseX;
 	my = mouseY;

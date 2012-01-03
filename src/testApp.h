@@ -52,6 +52,8 @@ class testApp : public ofBaseApp {
 	
 		//------ drawing
 		void drawHelp();
+    
+        float buttonTime;
 	
 };
 

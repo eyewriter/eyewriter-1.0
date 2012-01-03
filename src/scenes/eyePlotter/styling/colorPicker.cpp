@@ -54,16 +54,16 @@ void colorPicker::setup(int xx, int yy){
 	for ( int i = 0 ; i < butPerPage; i++ ){
 		colorButtons.push_back( buttonTrigger() );
 		colorButtons.back().setup( "", width * ( i % butPerRow ), width * ( i / butPerRow ), width, width);
-		colorButtons.back().setMaxCounter( buttonCount * 3 );
+		//colorButtons.back().setMaxCounter( buttonCount * 3 );
 		colorButtons.back().setRetrigger(false);	
 	}
 	
 	nextPage.setup("nextPage", width * (butPerRow-1), width * butPerPage / butPerRow, width, width);
-	nextPage.setMaxCounter(buttonCount * 3);
+	//nextPage.setMaxCounter(buttonCount * 3);
 	nextPage.setRetrigger(true);	
 	
 	prevPage.setup("prevPage", 0, width * butPerPage / butPerRow, width, width);
-	prevPage.setMaxCounter(buttonCount * 3);
+	//prevPage.setMaxCounter(buttonCount * 3);
 	prevPage.setRetrigger(true);	
 }
 

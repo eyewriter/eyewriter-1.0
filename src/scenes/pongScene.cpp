@@ -21,11 +21,11 @@ void pongScene::setup(){
 	
 	
 	fasterButton.setup("FASTER", ofGetWidth()-220,10,100,100);
-	fasterButton.setMaxCounter(0.5f);
+	fasterButton.setMaxCounter(1.0f);
 	fasterButton.setRetrigger(true);
 	
 	slowerButton.setup("SLOWER", ofGetWidth()-110,10,100,100);
-	slowerButton.setMaxCounter(0.5f);
+	slowerButton.setMaxCounter(1.0f);
 	slowerButton.setRetrigger(true);
 	
 	
@@ -102,8 +102,8 @@ void pongScene::draw(){
 		
 	ofPopStyle();
 	
-	fasterButton.draw();
-	slowerButton.draw();
+	fasterButton.draw(255);
+	slowerButton.draw(255);
 	
 	//drawCursor();
 }

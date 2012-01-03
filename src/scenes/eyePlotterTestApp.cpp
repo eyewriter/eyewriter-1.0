@@ -1,6 +1,6 @@
 #include "eyePlotterTestApp.h"
 
-int buttonCount = 22;
+int buttonCount = 1.0f;
 float rate = 1.8;
 float ptThreshold = 7.0f;
 
@@ -30,6 +30,7 @@ void eyePlotterTestApp::setup(){
 	//Our only button at this level - goes to next scene
 	nextScene.setup("NEXT MODE", 10, 580, 120, 80);
 	nextScene.setMaxCounter(buttonCount);
+    nextScene.setRetrigger(false);
 	
 	
 	//GHETTO SETTINGS QUICKLY HACKED - below are the ones that worked for the first app test
@@ -40,12 +41,16 @@ void eyePlotterTestApp::setup(){
 		<smoothPct>0.450000</smoothPct>
 	*/
 	
-	ghettoSettings.loadFile("settings.xml");
+	/*
+     
+     ghettoSettings.loadFile("settings.xml");
 	buttonCount = ghettoSettings.getValue("buttonCount", 22);
 	rate = ghettoSettings.getValue("rate", 1.8);
 	ptThreshold = ghettoSettings.getValue("ptThreshold", 7.0);
 	smoothPct = ghettoSettings.getValue("smoothPct", 0.4);
-	
+     
+	*/
+    
 	//gml.loadState(groups, "lastOne.gml");
 
 	mx = 0;

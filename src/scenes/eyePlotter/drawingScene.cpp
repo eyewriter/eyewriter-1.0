@@ -33,7 +33,7 @@ void drawingScene::setup(){
 	undoPoint.setup("undo point", 10, 355, 130, 75);
 	undo.setup("undo stroke", 10, 440, 130, 60);
 	showGrid.setup("grid on", "grid off", false, 10, 200, 130, 75);
-	showGrid.setMaxCounter(buttonCount);
+	//showGrid.setMaxCounter(buttonCount);
 	undoPoint.setRetrigger(true);
 	
 	drawableButtons.push_back(&nextLetter);
@@ -49,10 +49,10 @@ void drawingScene::setup(){
 	mx = 0.0;
 	my = 0.0;
 
-	nextStroke.setMaxCounter(buttonCount);	
-	nextLetter.setMaxCounter(buttonCount);
-	undo.setMaxCounter(buttonCount);
-	pause.setMaxCounter(buttonCount);
+	//nextStroke.setMaxCounter(buttonCount);	
+	//nextLetter.setMaxCounter(buttonCount);
+	//undo.setMaxCounter(buttonCount);
+	//pause.setMaxCounter(buttonCount);
 	button.setWaitTime( rate );
 	
 	if( groups.size() == 0 ){

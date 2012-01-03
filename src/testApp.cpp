@@ -108,16 +108,6 @@ void testApp::update(){
 			BT.y = ofRandom(100,ofGetHeight()-100);
 		}
 	}
-    
-    
-    
-    
-    
-    
-    
-   
-   
-	
 }
 
 
