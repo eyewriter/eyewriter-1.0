@@ -27,7 +27,7 @@ void testApp::setup(){
 	
 	
 	BT.setup("catch me!", 50,50,180,180);
-    //BT.setMaxCounter(15.0);
+    BT.setMaxCounter(1.0);
     //BT.setMaxCounter(TM.getButtonPressTime());
     bMouseSimulation = false;
 }

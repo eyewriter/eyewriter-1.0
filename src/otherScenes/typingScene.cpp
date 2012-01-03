@@ -44,7 +44,8 @@ void typingScene::setup(){
 	for (int i = 0; i < 36; i++){
 		buttonTrigger nButton;
 		nButton.setup(buttons[i], xStart + xadd2, yStart + yadd2, bWidth, bHeight);
-		nButton.setMaxCounter(buttonCount);
+		//nButton.setMaxCounter(buttonCount);
+        nButton.setMaxCounter(1.0f);
 		nButton.setRetrigger(false);
 		letterButtons.push_back(nButton);
 		
