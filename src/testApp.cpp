@@ -45,6 +45,43 @@ void testApp::update(){
 	// update the calibration manager
 	CM.update();
     
+    
+    if (CM.bAutomatic == true && CM.bAmInAutodrive == true && CM.bInAutoRecording){
+		
+		if (TM.bGotAnEyeThisFrame()){	
+			ofPoint trackedEye = TM.getEyePoint();
+			CM.fitter.registerCalibrationInput(trackedEye.x,trackedEye.y);
+			CM.inputEnergy = 1;
+		}
+	}
+    
+    
+    // smooth eye data in...
+    if (!bMouseSimulation){
+        if (CM.fitter.bBeenFit){
+            ofPoint trackedEye;
+			
+			if (bMouseEyeInputSimulation) {
+				trackedEye.x = mouseX;
+				trackedEye.y = mouseY;
+			} else {
+				trackedEye = TM.getEyePoint();
+			}
+            
+			ofPoint screenPoint = CM.fitter.getCalibratedPoint(trackedEye.x, trackedEye.y);
+			eyeSmoothed.x = CM.smoothing * eyeSmoothed.x + (1-CM.smoothing) * screenPoint.x;
+			eyeSmoothed.y = CM.smoothing * eyeSmoothed.y + (1-CM.smoothing) * screenPoint.y;
+        }
+    }
+    else{
+        eyeSmoothed.x = mouseX;
+		eyeSmoothed.y = mouseY;
+    }
+    
+    
+    
+    
+    
 	if( mode == MODE_DRAW ){
 		ofPoint pt = eyeSmoothed;
         if(bMouseSimulation) eyeApp.update( mouseX, mouseY );
@@ -70,28 +107,14 @@ void testApp::update(){
 		}
 	}
     
-    // smooth eye data in...
-    if (!bMouseSimulation){
-        if (CM.bBeenFit){
-            ofPoint trackedEye = TM.getEyePoint();
-            ofPoint screenPoint = CM.getCalibratedPoint(trackedEye.x, trackedEye.y);
-            eyeSmoothed.x = CM.smoothing * eyeSmoothed.x + (1-CM.smoothing) * screenPoint.x;
-            eyeSmoothed.y = CM.smoothing * eyeSmoothed.y + (1-CM.smoothing) * screenPoint.y;
-        }
-    }
-    else{
-        eyeSmoothed.x = mouseX;
-		eyeSmoothed.y = mouseY;
-    }
     
-    // record some points if we are in auto mode
-	if (CM.bAutomatic == true && CM.bAmInAutodrive == true && CM.bInAutoRecording){
-		
-		if (TM.bGotAnEyeThisFrame()){	
-			ofPoint trackedEye = TM.getEyePoint();
-			CM.registerCalibrationInput(trackedEye.x,trackedEye.y);
-		}
-	}
+    
+    
+    
+    
+    
+   
+   
 	
 }
 
@@ -112,10 +135,12 @@ void testApp::draw(){
 	
 		
 	// draw a green dot to see how good the tracking is:
-	if (CM.bBeenFit || bMouseSimulation){
-		ofSetColor(0,255,0,120);
-		ofFill();
-		ofCircle(eyeSmoothed.x, eyeSmoothed.y, 20);
+	if (CM.fitter.bBeenFit || bMouseSimulation){
+		if( mode != MODE_DRAW ){	
+			ofSetColor(0,255,0,120);
+			ofFill();
+			ofCircle(eyeSmoothed.x, eyeSmoothed.y, 20);
+		}
 	}	
 }
 
