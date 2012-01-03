@@ -39,6 +39,8 @@ class buttonToggle : public buttonRect{
 	}
 
 	bool update(float xIn, float yIn){
+        
+        
 		bool changed = false;
 	
 		float amntShouldHappened = 60.0f;

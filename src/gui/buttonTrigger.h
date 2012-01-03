@@ -21,7 +21,7 @@ class buttonTrigger : public buttonRect{
 		hasLeft = true;
 		counter = 0.0f;
 		pct = 0.0f;
-        maxCount = 3.0f;
+        maxCount = 1.0f;
         //maxCount = ((trackingManager*)ofGetAppPtr())->buttonPressTime;
 		//maxCount = buttonPressTimer; //this is set from controlPanel
 		allowRetrigger = false;
@@ -76,27 +76,43 @@ class buttonTrigger : public buttonRect{
         
         if( inRect(xIn, yIn) ){
             if(!active){
-                timeStamp = currentTime;
-                //cout << "hover timestamp: " << timeStamp << endl;
-                active = true;
+                if (firstTrigger){ 
+                    timeStamp = currentTime;
+                    cout << "hover timestamp: " << timeStamp << endl;
+                    active = true;
+                    firstTrigger = false;
+                }
             }
             
-            else if (active){
+            else{ 
                 float timeDiff = currentTime - timeStamp;
-                //cout << "timeDiff " << timeDiff << endl;
+                cout << "timeDiff " << timeDiff << endl;
                 pct = timeDiff/maxCount;
+                
                 if (timeDiff >= maxCount){
-                    //cout << "BUTTON TRIGGERED" << endl;
-                    bFlash = true;
-					flashTill = ofGetElapsedTimef() + flashLength;
-                    active = false;
                     changed = true;
+                    cout << "BUTTON TRIGGERED" << endl;
+                    if(allowRetrigger){
+                        cout << "retrigger" << endl;
+                        active = true;
+                        timeStamp = currentTime;
+                        bFlash = true;
+                        flashTill = currentTime + flashLength;
+                    }
+                    else {
+                        active = false;
+                        timeStamp = currentTime;
+                        bFlash = true;
+                        flashTill = currentTime + flashLength;
+                        pct = 0.0f;
+                    }
                 }
             }
         }
         else { //mouse not inRect
             active = false;
             pct = 0;
+            firstTrigger = true;
         }
         
 		if( bFlash && ofGetElapsedTimef() > flashTill ){
@@ -159,7 +175,8 @@ class buttonTrigger : public buttonRect{
 		preTime = ofGetElapsedTimef();
 		
          */
-	}	
+	}
+    
 	
 	void draw(float opacity = 255){
 		ofFill();
@@ -236,6 +253,7 @@ class buttonTrigger : public buttonRect{
 	
 	
 	int     numTriggers;
+    bool    firstTrigger;
 	
 	float   preTime;
 	float   maxCount;

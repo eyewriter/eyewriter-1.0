@@ -19,10 +19,12 @@ void typingScene::setup(){
 	
 	franklinBookSmall.loadFont("fonts/HelveticaNeueMed.ttf", 16);
 	carriageReturnCounter = 0;
-	buttonCount=3;
+
 	ofBackground(255, 255, 255);
 	shiftOn = false;
 	
+    //---- buttons setup
+    
 	string buttons[36] = 
 	{"!\n1", "@\n2", "#\n3", "$\n4", "%\n5", "^\n6", "&\n7", "*\n8", "(\n9", ")\n0", 
 		"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", 
@@ -40,13 +42,16 @@ void typingScene::setup(){
 	float yStart  = 15;
 	float bWidth  = ofGetHeight()/8;
 	float bHeight = ofGetHeight()/8;
+    
+    
+    //sensitivity in seconds
+	buttonCount=1.0f;
 	
 	for (int i = 0; i < 36; i++){
 		buttonTrigger nButton;
 		nButton.setup(buttons[i], xStart + xadd2, yStart + yadd2, bWidth, bHeight);
-		//nButton.setMaxCounter(buttonCount);
-        nButton.setMaxCounter(1.0f);
-		nButton.setRetrigger(false);
+		nButton.setMaxCounter(buttonCount);
+		nButton.setRetrigger(true);
 		letterButtons.push_back(nButton);
 		
 		xStart += ofGetWidth()/10;
