@@ -27,7 +27,7 @@ void testApp::setup(){
 	
 	
 	BT.setup("catch me!", 50,50,180,180);
-    //BT.setMaxCounter(15.0);
+    BT.setMaxCounter(1.0); //button sensitivity
     //BT.setMaxCounter(TM.getButtonPressTime());
     bMouseSimulation = false;
 }
@@ -68,6 +68,8 @@ void testApp::update(){
 				trackedEye = TM.getEyePoint();
 			}
             
+            //cout << CM.smoothing << endl;
+            CM.smoothing = 0.7;
 			ofPoint screenPoint = CM.fitter.getCalibratedPoint(trackedEye.x, trackedEye.y);
 			eyeSmoothed.x = CM.smoothing * eyeSmoothed.x + (1-CM.smoothing) * screenPoint.x;
 			eyeSmoothed.y = CM.smoothing * eyeSmoothed.y + (1-CM.smoothing) * screenPoint.y;
