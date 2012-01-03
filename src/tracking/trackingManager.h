@@ -46,6 +46,10 @@ class trackingManager {
 		float				threshold;
 		bool				bFoundEye;
 		ofPoint				eyePoint;
+        
+        //---- button settings
+        float               buttonPressTime;
+        float       getButtonPressTime();
 	
 
 };

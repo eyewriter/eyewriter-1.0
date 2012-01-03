@@ -12,7 +12,8 @@ typedef struct{
 //    if( e1
 //}
 
-class simpleFileLister : public ofxDirList{
+//class simpleFileLister : public ofxDirList{
+class simpleFileLister : public ofDirectory{
 
      public:
 
@@ -36,13 +37,13 @@ class simpleFileLister : public ofxDirList{
             bRevSort        = false;
             entries.clear();
 
-            ofxDirList::reset();
-            int numFiles = ofxDirList::listDir(directory);
+            ofDirectory::reset();
+            int numFiles = ofDirectory::listDir(directory);
             entries.assign(numFiles, entry());
 
             for(int i = 0; i < numFiles; i++){
-                entries[i].filename = ofxDirList::getName(i);
-                entries[i].fullpath = ofxDirList::getPath(i);
+                entries[i].filename = ofDirectory::getName(i);
+                entries[i].fullpath = ofDirectory::getPath(i);
             }
 
             lastDirectory = directory;

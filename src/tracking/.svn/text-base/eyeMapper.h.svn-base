@@ -1,0 +1,105 @@
+#pragma once
+
+
+#include "ofMain.h"
+#include "ofxOpenCv.h"
+#include "ofxDirList.h"
+#include "ofxVectorMath.h"
+#include "ofxNetwork.h"
+#include "ofxOsc.h"
+#include "ofxThread.h"
+#include "ofxXmlSettings.h"
+#include "ofx3DModelLoader.h"
+
+#include "ofxCvGrayscaleAdvanced.h"
+#include "ofxControlPanel.h"
+#include "sphereCalibrator.h"
+
+#include "agg_trans_perspective.h"
+
+
+class eyeMapper : public ofBaseDraws, public guiCustomImpl {
+
+	public:
+
+		eyeMapper();
+		
+		void resetDrawing();
+		void addDrawingPoint(float x, float y);
+		void mapPoint(float x, float y);
+		void endDrawing();
+	
+		ofPoint	getDrawingPoint() { return eyePoint; };
+		ofPoint	getNormalizedPostSpherePoint() { return pointAfterSphereNormalized; };
+		bool	bNormalizedPointReady() { return bHaveLearntMinMax; };
+	
+		
+		void resetMinMax();
+		
+		
+		void draw(float x, float y, float w, float h);
+		void draw(float x, float y){ draw (x,y,640,480); }
+	
+		void mousePressed(float x, float y);
+		void mouseDragged(float x, float y);
+		void mouseReleased();
+	
+	
+	
+		float getWidth(){ return 640; }
+		float getHeight(){ return 480; }
+	
+		ofPoint minPoint;
+		ofPoint maxPoint;
+		ofPoint eyeFollower;
+		ofPoint	eyePoint;
+		ofPoint	eyePointCatch;
+
+		vector <ofPoint> pts;
+	
+		ofPoint	minSquareX;
+		ofPoint minSquareY;
+	
+		sphereCalibrator * SC;
+		
+		bool	bHaveLearntMinMax;
+		bool	bLearnMinMax;
+		bool	bFirstFrameDontBlur;
+		
+		ofPoint	pointAfterSphereNormalized;
+	
+		bool	bLearningCorners;
+		int		whichCorner;
+		void	learnThisConerAndAdvance();
+		bool	bLearnedAll;
+		ofPoint	cornerPts[4];
+		ofPoint transformPts[4];
+		
+		// agg stuff :)
+		double dsrc[8];
+		double ddst[8];
+		agg::trans_perspective *TP;
+	
+	
+};
+
+
+/*
+
+
+ bool			b_useAGG; 
+ 
+ b_useAGG = true;
+TP = new agg::trans_perspective();
+TP->quad_to_quad(dsrc,ddst);
+
+ 
+ double dinp[2];
+ dinp[0] = a;
+ dinp[1] = b;
+ TP->transform(dinp, dinp+1);
+ outx = dinp[0];
+ outy = dinp[1];
+*/
+
+

@@ -1,5 +1,5 @@
 #include "trackingManager.h"
-
+#include "buttonTrigger.h"
 
 trackingManager::trackingManager(){
 
@@ -39,8 +39,6 @@ void trackingManager::update(){
 	//--- gui
 	panel.update();
 	updateGui();
-	
-	
 }
 
 
@@ -67,6 +65,7 @@ void trackingManager::setupGui(){
 	panel.addPanel("image adjustment", 1, false);
 	panel.addPanel("edge fixer", 1, false);
 	panel.addPanel("blob detection", 1, false);
+    panel.addPanel("button settings", 1, false);
 	
 	if (IM.mode == INPUT_VIDEO){
 		panel.addPanel("video file settings", 1, false);
@@ -74,25 +73,19 @@ void trackingManager::setupGui(){
 		panel.addPanel("live video settings", 1, false);
 	}
 	
-	//---- gaze
+	//---- img adjust
 	panel.setWhichPanel("image adjustment");
 	panel.setWhichColumn(0);
-		
 	panel.addToggle("flip horizontal ", "B_RIGHT_FLIP_X", false);
 	panel.addToggle("flip vertical ", "B_RIGHT_FLIP_Y", false);
-	
 	panel.addToggle("use contrast / bri", "B_USE_CONTRAST", true);
 	panel.addSlider("contrast ", "CONTRAST", 0.28f, 0.0, 1.0f, false);
 	panel.addSlider("brightness ", "BRIGHTNESS", -0.02f, -1.0, 3.0f, false);
-		
 	panel.addToggle("use gamma ", "B_USE_GAMMA", true);
 	panel.addSlider("gamma ", "GAMMA", 0.57f, 0.01, 3.0f, false);
-	
 	panel.addSlider("threshold ", "THRESHOLD_GAZE", threshold, 0, 255, true);
 
-	
-	
-	
+    //---- blog detect
 	panel.setWhichPanel("blob detection");
 	panel.addToggle("use dilate", "B_USE_DILATE", true);
 	panel.addSlider("dilate num ", "N_DILATIONS", 0, 0, 10, true);
@@ -116,15 +109,17 @@ void trackingManager::setupGui(){
 		panel.addToggle("load video settings", "VIDEO_SETTINGS", false);
 	}
 	
+    //---- button settings
+	panel.setWhichPanel("button settings");
+    panel.addSlider("button press time", "BUTTONPRESS_TIME", 5.0f, 0.5f, 30.0f, true);
 	
-	
+    
+    //---- load xml settings
 	panel.loadSettings("settings/trackingSettings.xml");
-	
-	
 }
 
 void trackingManager::updateGui(){
-	
+    	
 	tracker.flip(  panel.getValueB("B_RIGHT_FLIP_X"),  panel.getValueB("B_RIGHT_FLIP_Y") );
 	
 	minBlob = panel.getValueI("MIN_BLOB");
@@ -173,7 +168,6 @@ void trackingManager::updateGui(){
 			panel.setValueB("VIDEO_SETTINGS", false);
 		}
 	}
-	
 }
 
 void trackingManager::videoSettings(){
@@ -201,7 +195,7 @@ void trackingManager::draw(){
 		
 		tracker.threshImg.draw(10,20+240,320,240);
 		
-		ofSetColor(255,255,255); //, <#int g#>, <#int b#>)
+		ofSetColor(255,255,255);
 		ofFill();
 		ofRect( 320+20,240+20,320, 240);
 		
@@ -237,16 +231,19 @@ void trackingManager::draw(){
 	ofDrawBitmapString("     (return) - change mode",	700,550+50);
 	ofDrawBitmapString("        (esc) - exit",			700,550+70);
 	
+    if (panel.getSelectedPanelName() == "button settings "){
+        buttonPressTime = panel.getValueF("BUTTONPRESS_TIME");
+    }
 
-	
-	
-	panel.draw();
-	
-	
-	
-	
+	panel.draw();	
 }
 
+//--------------------------------------------------------------
+float trackingManager::getButtonPressTime(){
+	
+	return buttonPressTime;
+	
+}
 
 //--------------------------------------------------------------
 void trackingManager::mouseDragged(int x, int y, int button){

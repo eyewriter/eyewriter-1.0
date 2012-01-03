@@ -4,7 +4,7 @@
 #include "ofMain.h"
 #include "ofxOpenCv.h"
 #include "ofxCvGrayscaleAdvanced.h"
-#include "ofxVectorMath.h"
+#include "ofVectorMath.h"
 
 class eyeEllipse {
 	

@@ -1,0 +1,363 @@
+#include "eyeMapper.h"
+
+
+static bool bUseSphere = false;
+
+// this is Paul Bourke code for warping (input and output is -1 to 1)
+// http://local.wasp.uwa.edu.au/~pbourke/miscellaneous/imagewarp/
+//
+// int Eval(float x,float y,float *xnew,float *ynew)
+// {
+//	double phi,radius,radius2;
+//	double xtmp,ytmp;
+//	double denom;
+//	
+//	/* Some things that may be needed */
+//	radius2 = x*x + y*y;
+//	radius = sqrt(radius2);
+//	phi = atan2(y,x);
+//	
+//	int mapping = 1;
+//	
+//	switch (mapping) {
+//		case 1:
+//			/*
+//			 Square root radial function
+//			 Normally clamped to radius <= 1
+//			 */
+//			radius = sqrt(radius);
+//			*xnew = radius * cos(phi);
+//			*ynew = radius * sin(phi);
+//			break;
+//		default:
+//			/*
+//			 Unity mapping
+//			 */
+//			*xnew = x;
+//			*ynew = y;
+//			break;
+//	}
+//	
+//	return(TRUE);
+//}
+
+
+//---------------------------------------------------------------------------------
+eyeMapper::eyeMapper(){
+	bFirstFrameDontBlur = true;
+	
+	
+	maxPoint.x = -10000;
+	maxPoint.y = -10000;
+	
+	minPoint.x = 64000;
+	minPoint.y = 48000;
+	
+	
+	bLearnMinMax = false;
+	bHaveLearntMinMax = false;
+	
+	pointAfterSphereNormalized.set(0,0);
+
+	
+	bLearningCorners = false;
+	whichCorner = 0;
+	bLearnedAll = false;
+
+	transformPts[0].set(0,0);
+	transformPts[1].set(ofGetWidth(), 0);
+	transformPts[2].set(ofGetWidth(), ofGetHeight());
+	transformPts[3].set(0, ofGetHeight());
+	
+	ddst[0] = 0;
+	ddst[1] = 0;
+	ddst[2] = 640;
+	ddst[3] = 0;
+	ddst[4] = 640;
+	ddst[5] = 480;
+	ddst[6] = 0;
+	ddst[7] = 480;
+	
+	dsrc[0] = 0;
+	dsrc[1] = 0;
+	dsrc[2] = 640;
+	dsrc[3] = 0;
+	dsrc[4] = 640;
+	dsrc[5] = 480;
+	dsrc[6] = 0;
+	dsrc[7] = 480;
+	
+	TP = new agg::trans_perspective();
+	TP->quad_to_quad(dsrc,ddst);
+	
+}
+
+void eyeMapper::learnThisConerAndAdvance(){
+	
+	if (bLearningCorners == true){
+		if (!bLearnedAll){
+			cornerPts[whichCorner].x = eyePoint.x;
+			cornerPts[whichCorner].y = eyePoint.y;
+			
+			dsrc[whichCorner * 2] =  eyePoint.x;
+			dsrc[whichCorner * 2 + 1] =  eyePoint.y;
+
+		} 
+		
+		whichCorner++;
+		if (whichCorner == 4){
+			bLearnedAll = true;
+			bLearningCorners = false;
+			TP->quad_to_quad(dsrc,ddst);
+		}
+	} else {
+		
+		bLearningCorners = true;
+		whichCorner = 0;
+		bLearnedAll = false;
+		
+		transformPts[0].set(0,0);
+		transformPts[1].set(ofGetWidth(), 0);
+		transformPts[2].set(ofGetWidth(), ofGetHeight());
+		transformPts[3].set(0, ofGetHeight());
+		
+		
+	}
+}
+
+
+
+//---------------------------------------------------------------------------------
+void eyeMapper::resetMinMax(){
+	maxPoint.x = -10000;
+	maxPoint.y = -10000;
+	
+	minPoint.x = 64000;
+	minPoint.y = 48000;
+}
+
+//---------------------------------------------------------------------------------
+void eyeMapper::resetDrawing(){
+	bFirstFrameDontBlur = true;
+}
+
+//---------------------------------------------------------------------------------
+void eyeMapper::endDrawing(){
+	pts.clear();
+}
+
+
+//---------------------------------------------------------------------------------
+void eyeMapper::addDrawingPoint(float x, float y){
+	/*if (bFirstFrameDontBlur == true){
+		eyeFollower.set(x,y);
+		bFirstFrameDontBlur = false;
+	} else {
+		eyeFollower.x = 0.65f * eyeFollower.x + 0.45f * x;
+		eyeFollower.y = 0.65f * eyeFollower.y + 0.45f * y;
+	}*/
+}
+
+//---------------------------------------------------------------------------------
+void eyeMapper::mapPoint(float x, float y){
+	
+	
+	
+	//eyePoint.set(x,y);
+	
+	if (bFirstFrameDontBlur == true){
+		eyePoint.set(x,y);
+		bFirstFrameDontBlur = false;
+	} else {
+		eyePoint.x = 0.55f * eyePoint.x + 0.45f * x;
+		eyePoint.y = 0.55f * eyePoint.y + 0.45f * y;
+	}
+	
+	
+	pts.push_back(eyePoint);
+	if (pts.size() > 110){
+		pts.erase(pts.begin());
+	}
+	
+	float minDistance = 100000;
+	int minIndex = -1;
+	
+	if (bUseSphere == true){
+		// find the closest sphere point: 
+
+		
+
+		for (int i = 0; i < SC->spherePoints.size(); i++){
+			float dx = SC->spherePoints[i].my2dPt.x - eyePoint.x;
+			float dy = SC->spherePoints[i].my2dPt.y - eyePoint.y;
+			float dist = sqrt(dx*dx + dy*dy);
+			if (dist < minDistance) {
+				minIndex = i;
+				minDistance = dist;
+			}
+		}
+
+		if (minIndex != -1){
+			//printf("min = %i, lat %f, lon %f \n", minIndex, SC->spherePoints[minIndex].myLatitude, SC->spherePoints[minIndex].myLongitude);
+			SC->myTrackedPointLat = SC->spherePoints[minIndex].myLatitude;
+			SC->myTrackedPointLon = SC->spherePoints[minIndex].myLongitude;
+		} else {
+			// problem houston
+			return;
+		}
+	} 
+	
+	
+	// try do the transform stuff : 
+	
+	
+	double dinp[2];
+	dinp[0] = eyePoint.x;
+	dinp[1] = eyePoint.y;
+	TP->transform(dinp, dinp+1);
+	//printf("transform of eye %f %f  \n", (float)dinp[0], (float)dinp[1]);	
+
+	float xAfterSphere = eyePoint.x;
+	float yAfterSphere = eyePoint.y;
+	
+	xAfterSphere = (float)dinp[0];
+	yAfterSphere = (float)dinp[1];
+	
+	if (bUseSphere == true){
+
+		float xAfterSphere =  ((180+SC->spherePoints[minIndex].myLatitude)/360.0f)*640.0f - 100;
+		float yAfterSphere =  480 - ((90+SC->spherePoints[minIndex].myLongitude)/180.0f)*480.0f ;
+	} 
+
+	bHaveLearntMinMax = true;
+	
+	/*
+	if (bLearnMinMax == true){
+		
+		bHaveLearntMinMax = true;
+		
+		if (minPoint.x > xAfterSphere){
+			minPoint.x = xAfterSphere;
+		}
+		
+		if (minPoint.y > yAfterSphere){
+			minPoint.y = yAfterSphere;
+		}
+		
+		if (maxPoint.x < xAfterSphere){
+			maxPoint.x = xAfterSphere;
+		}
+		
+		if (maxPoint.y < yAfterSphere){
+			maxPoint.y = yAfterSphere;
+		}
+		
+		
+		
+	}
+	*/
+	
+	//if (bHaveLearntMinMax){
+		
+		//pointAfterSphereNormalized.x = (xAfterSphere - minPoint.x) / (maxPoint.x - minPoint.x);
+		//pointAfterSphereNormalized.y = (yAfterSphere - minPoint.y) / (maxPoint.y - minPoint.y);
+		
+		//pointAfterSphereNormalized.x =;
+		//pointAfterSphereNormalized.y = yAfterSphere;
+	
+		pointAfterSphereNormalized.x =	0.93f * pointAfterSphereNormalized.x + 
+										0.07f *  xAfterSphere / 640.0f;
+		pointAfterSphereNormalized.y =	0.93f * pointAfterSphereNormalized.y + 
+										0.07f *  yAfterSphere / 480.0f;
+	
+	if (pointAfterSphereNormalized.x < 0) pointAfterSphereNormalized.x = 0;
+	if (pointAfterSphereNormalized.x > 1) pointAfterSphereNormalized.x = 1;
+	
+	if (pointAfterSphereNormalized.y < 0) pointAfterSphereNormalized.y = 0;
+	if (pointAfterSphereNormalized.y > 1) pointAfterSphereNormalized.y = 1;
+		///= 640.0f;
+		//pointAfterSphereNormalized.y /= 480.0f;
+		
+		/*
+		pointAfterSphereNormalized.x /= 2.0f;
+		pointAfterSphereNormalized.y /= 2.0f;
+		pointAfterSphereNormalized.x += 0.25f;
+		pointAfterSphereNormalized.y += 0.25f;
+		*/
+		
+		///printf("%f %f \n", pointAfterSphereNormalized.x, pointAfterSphereNormalized.y);	
+	//}
+	
+	
+}
+
+
+
+//---------------------------------------------------------------------------------
+void eyeMapper::mousePressed(float x, float y){
+	
+}
+//---------------------------------------------------------------------------------
+void eyeMapper::mouseDragged(float x, float y){
+
+	
+}
+//---------------------------------------------------------------------------------
+void eyeMapper::mouseReleased(){
+	
+}
+
+//---------------------------------------------------------------------------------
+void eyeMapper::draw(float x, float y, float w, float h){
+	
+	float scale = w/640.0f;
+	
+	
+	
+	glPushMatrix();
+	glTranslated(x, y, 0);
+	glScalef(scale, scale, 1);
+	
+	ofSetColor(255,0,255);
+	
+	ofFill();
+	/*ofCircle(eyePoint.x,eyePoint.y, 5); 
+	ofLine(0,eyePoint.y,640,eyePoint.y);
+	ofLine(eyePoint.x,0,eyePoint.x,480);
+	*/
+	ofNoFill();
+	//ofRect(minPoint.x, minPoint.y, maxPoint.x - minPoint.x, maxPoint.y - minPoint.y);
+	
+	
+	//float pctx = (eyePoint.x - minPoint.x) / ( maxPoint.x - minPoint.x);
+	//float pcty = (eyePoint.y - minPoint.y) / ( maxPoint.y - minPoint.y);
+	
+	
+	//ofFill();
+	//ofSetColor(255,0,0);
+	//ofRect(480*pctx - 5, 480*pcty - 5,10,10);
+	
+	glLineWidth(2);
+	ofEnableAlphaBlending();
+	ofNoFill();
+	if (pts.size() > 0)
+	for (int i = 0; i < pts.size()-1; i++){
+		
+		float pct = i / (float)(pts.size());
+		ofSetColor(255,0,255, 255 * (pct));
+		ofLine(pts[i].x, pts[i].y,pts[i+1].x, pts[i+1].y);
+	}
+
+
+	
+	glLineWidth(1);
+	
+		   
+	//printf("%f \n", minPoint.x, minPoint.y);
+	glPopMatrix();
+		   
+}
+
+
+
+

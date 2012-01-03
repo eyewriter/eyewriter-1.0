@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/projects/!svn/ver/37/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel
+END
+guiTypeSlider.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/guiTypeSlider.h
+END
+simpleLogger.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/simpleLogger.h
+END
+guiTypeText.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/guiTypeText.h
+END
+guiCustomImpl.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/projects/!svn/ver/19/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/guiCustomImpl.h
+END
+guiXmlValue.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/guiXmlValue.h
+END
+guiTypeMultiToggle.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/guiTypeMultiToggle.h
+END
+guiTypePanel.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/guiTypePanel.h
+END
+guiBaseObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/guiBaseObject.h
+END
+ofxControlPanel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/projects/!svn/ver/37/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/ofxControlPanel.cpp
+END
+guiTypeFileLister.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/guiTypeFileLister.h
+END
+guiIncludes.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/guiIncludes.h
+END
+simpleFileLister.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/simpleFileLister.h
+END
+ofxControlPanel.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/ofxControlPanel.h
+END
+guiType2DSlider.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/projects/!svn/ver/16/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/guiType2DSlider.h
+END
+guiTypeCustom.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/projects/!svn/ver/19/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/guiTypeCustom.h
+END
+guiValue.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/guiValue.h
+END
+guiColor.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/guiColor.h
+END
+guiTextBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/guiTextBase.h
+END
+guiTypeLogger.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/guiTypeLogger.h
+END
+guiTypeToggle.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/guiTypeToggle.h
+END
+guiTypeDrawable.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/guiTypeDrawable.h
+END
+simpleColor.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ofxControlPanel/simpleColor.h
+END

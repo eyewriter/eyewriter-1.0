@@ -2,6 +2,7 @@
 
 
 #include "FitEllipse.h"
+#include "ofxPoint2f.h"
 
 //==========================================================
 // solve_ellipse
@@ -316,6 +317,7 @@ void eyeTracker::update(ofxCvGrayscaleImage & grayImgFromCam, float threshold, f
 			int resolution = 24;
 			
 			ofxPoint2f ptsForRotation[resolution];
+			//ofVec2f ptsForRotation[resolution];
 			
 			for (int i=0; i<resolution; i++){
 				float t = TWO_PI * (float)i/(float)resolution;
@@ -325,7 +327,8 @@ void eyeTracker::update(ofxCvGrayscaleImage & grayImgFromCam, float threshold, f
 			}
 			
 			for (int i=0; i<resolution; i++){
-				ptsForRotation[i].rotate(theta * RAD_TO_DEG, ofxPoint2f(cx, cy));
+				//ptsForRotation[i].rotate(theta * RAD_TO_DEG, ofxPoint2f(cx, cy));
+                ptsForRotation[i].rotate(theta * RAD_TO_DEG, ofxPoint2f(cx, cy));
 			}
 			
 			currentEyePoint.set(cx, cy);
@@ -372,7 +375,7 @@ void eyeTracker::draw(float x, float y, float totalWidth, float totalHeight){
 		
 	ofPopMatrix();
 	
-	ofSetColor(0xffffff);
+	ofSetHexColor(0xffffff);
 	ofDrawBitmapString("thresh is "+ofToString(threshold, 0), x, y + 10);
 	
 	

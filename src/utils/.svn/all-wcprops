@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/projects/!svn/ver/37/TEMPT/trunk/trackingApp/src/utils
+END
+FitEllipse.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/FitEllipse.cpp
+END
+ConicPlotter.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ConicPlotter.cpp
+END
+FitEllipse.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/projects/!svn/ver/28/TEMPT/trunk/trackingApp/src/utils/FitEllipse.h
+END
+ofxCvGrayscaleAdvanced.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/projects/!svn/ver/35/TEMPT/trunk/trackingApp/src/utils/ofxCvGrayscaleAdvanced.cpp
+END
+messager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/projects/!svn/ver/37/TEMPT/trunk/trackingApp/src/utils/messager.cpp
+END
+ConicPlotter.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/projects/!svn/ver/1/TEMPT/trunk/trackingApp/src/utils/ConicPlotter.h
+END
+ofxCvGrayscaleAdvanced.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/projects/!svn/ver/35/TEMPT/trunk/trackingApp/src/utils/ofxCvGrayscaleAdvanced.h
+END
+messager.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/projects/!svn/ver/37/TEMPT/trunk/trackingApp/src/utils/messager.h
+END

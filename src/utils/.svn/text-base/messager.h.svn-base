@@ -1,0 +1,132 @@
+#pragma once
+
+#include "ofMain.h"
+#include "ofxOsc.h"
+
+typedef enum { 
+	EYE_DOWN,
+	EYE_UP,
+	EYE_POS,
+	EYE_CLICK,
+	EYE_DOUBLE_CLICK,
+	EYE_TRIPPLE_CLICK,	
+}eyeMsgState;
+
+
+
+class eyeArg : public ofEventArgs{
+	public:
+		eyeMsgState state;
+		int whichEye;
+		float x;
+		float y;
+		float time;
+};
+
+static ofEvent <eyeArg> eyePos;
+static ofEvent <eyeArg> eyeDown;
+static ofEvent <eyeArg> eyeUp;
+static ofEvent <eyeArg> eyeClick;
+static ofEvent <eyeArg> eyeDouble;
+static ofEvent <eyeArg> eyeTripple;
+
+
+class eyeReciever{
+	public:
+		virtual void eyeOpened(eyeArg &myArgs){}
+		virtual void eyeClosed(eyeArg &myArgs){}
+		virtual void eyeMoved(eyeArg &myArgs){}
+		virtual void eyeSingleClick(eyeArg &myArgs){}
+		virtual void eyeDoubleClick(eyeArg &myArgs){}
+		virtual void eyeTrippleClick(eyeArg &myArgs){}
+
+		eyeReciever(){
+			ofAddListener(eyePos, this, &eyeReciever::eyeMoved);
+			ofAddListener(eyeDown, this, &eyeReciever::eyeClosed);
+			ofAddListener(eyeUp, this, &eyeReciever::eyeOpened);
+			ofAddListener(eyeClick, this, &eyeReciever::eyeSingleClick);
+			ofAddListener(eyeDouble, this, &eyeReciever::eyeDoubleClick);
+			ofAddListener(eyeTripple, this, &eyeReciever::eyeTrippleClick);
+		}
+
+};
+
+class messager{
+		
+	public:
+
+		messager(){
+
+		}
+		
+		//----------------------------------------------------------
+		void sendMessage(eyeMsgState state, float x, float y, int whichEye){
+			
+			eyeArg args;
+			args.state = state;
+			args.x = x;
+			args.y = y;
+			args.whichEye = whichEye;
+			
+			sendMessage( state, args );
+		}
+		
+		//----------------------------------------------------------
+		void sendMessage(eyeMsgState state, eyeArg args){
+			 if( bUseOsc ){
+		//		ofxOscMessage m;
+		//		m.setAddress(eventName);
+		//		m.addFloatArg(value);
+		//		osc.sendMessage(m);
+			 }
+			 if( bUseEvents ){
+			 
+				args.state = state;
+			 
+				if( state == EYE_UP ){
+					ofNotifyEvent(eyeUp, args);
+				}else if( state == EYE_DOWN ){
+					ofNotifyEvent(eyeDown, args);
+				}else if( state == EYE_POS ){
+					ofNotifyEvent(eyePos, args);
+				}else if( state == EYE_CLICK ){
+					ofNotifyEvent(eyeClick, args);
+				}else if( state == EYE_DOUBLE_CLICK ){
+					ofNotifyEvent(eyeDouble, args);
+				}else if( state == EYE_TRIPPLE_CLICK ){
+					ofNotifyEvent(eyeTripple, args);
+				}
+				
+			 }
+		}
+		
+		//----------------------------------------------------------
+		void setup(bool useEvents, bool useOsc, string ip, int port){
+			 bUseEvents = useEvents;
+			 bUseOsc    = useOsc;
+			 
+			 if( bUseOsc ){
+				osc.setup(ip, port);
+			 }
+			 
+			 if( useEvents ){
+				eyePos.enable();
+				eyeDown.enable();
+				eyeUp.enable();
+				eyeClick.enable();
+				eyeDouble.enable();
+				eyeTripple.enable();
+				eyeDown.enable();
+			 }
+		}
+			
+		static int count;
+	
+		bool bUseEvents;
+		bool bUseOsc;
+				
+		ofxOscSender osc;
+	
+		
+};
+
