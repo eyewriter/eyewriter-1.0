@@ -243,6 +243,8 @@ void calibrationManager::draw(){
 	}
 
 	fitter.draw();
+    
+    //panel.draw();
 }
 
 //--------------------------------------------------------------
