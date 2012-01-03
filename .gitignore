@@ -9,6 +9,7 @@ build/*
 #*/*/bin
 !*/bin/data
 */*.app
+bin/*.app
 
 # osx noise
 .DS_Store
