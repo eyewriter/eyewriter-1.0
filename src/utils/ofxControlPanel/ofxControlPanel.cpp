@@ -38,7 +38,7 @@ void ofxControlPanel::setup(string controlPanelName, float panelX, float panelY,
 //-----------------------------
 void ofxControlPanel::loadFont( string fontName, int fontsize ){
     guiTTFFont.loadFont(fontName, fontsize);
-    bool okay = guiTTFFont.bLoadedOk;
+    bool okay = guiTTFFont.isLoaded();
 
     if(okay){
         bUseTTFFont = true;
