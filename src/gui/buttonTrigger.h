@@ -69,8 +69,6 @@ class buttonTrigger : public buttonRect{
 
 	bool update(float xIn, float yIn){
 		//printf("fuck!\n");
-	
-        //maxCount = buttonPressTimer; 
         
 		bool changed = false;		
         
@@ -79,7 +77,7 @@ class buttonTrigger : public buttonRect{
         if( inRect(xIn, yIn) ){
             if(!active){
                 timeStamp = currentTime;
-                cout << "hover timestamp: " << timeStamp << endl;
+                //cout << "hover timestamp: " << timeStamp << endl;
                 active = true;
             }
             
@@ -88,7 +86,7 @@ class buttonTrigger : public buttonRect{
                 //cout << "timeDiff " << timeDiff << endl;
                 pct = timeDiff/maxCount;
                 if (timeDiff >= maxCount){
-                    cout << "BUTTON TRIGGERED" << endl;
+                    //cout << "BUTTON TRIGGERED" << endl;
                     bFlash = true;
 					flashTill = ofGetElapsedTimef() + flashLength;
                     active = false;
@@ -106,7 +104,12 @@ class buttonTrigger : public buttonRect{
 		}   
         
         return changed;
-        /*float amntShouldHappened = 60.0f;
+        
+        /* 
+         
+         //---- old methods checking fps differencing
+         
+         float amntShouldHappened = 60.0f;
 		
 		float currentTime = ofGetElapsedTimef();
 		float diff = currentTime - preTime;
