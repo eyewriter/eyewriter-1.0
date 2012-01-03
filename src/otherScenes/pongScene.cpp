@@ -20,12 +20,12 @@ void pongScene::setup(){
 	ballVelocity.set(ofRandom(-5,5), ofRandom(2,9));
 	
 	
-	fasterButton.setup("FASTER", 800,100,100,100);
-	fasterButton.setMaxCounter(30);
+	fasterButton.setup("FASTER", ofGetWidth()-220,10,100,100);
+	fasterButton.setMaxCounter(0.5f);
 	fasterButton.setRetrigger(true);
 	
-	slowerButton.setup("SLOWER", 950,100,100,100);
-	slowerButton.setMaxCounter(30);
+	slowerButton.setup("SLOWER", ofGetWidth()-110,10,100,100);
+	slowerButton.setMaxCounter(0.5f);
 	slowerButton.setRetrigger(true);
 	
 	
