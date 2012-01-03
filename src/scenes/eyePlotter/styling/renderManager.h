@@ -39,7 +39,7 @@ class renderManager{
 		ofPushStyle();
 		
 		if( dot.width == 0){
-			dot.loadImage("resources/dot2.png");
+			dot.loadImage("images/dot2.png");
 			dot.setAnchorPercent(50, 50);
 		}
 		

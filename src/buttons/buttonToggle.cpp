@@ -18,7 +18,7 @@ buttonToggle::buttonToggle(){
     active  = false;
     hasLeft = true;
     counter = 0.0f;
-    maxCount = 10.0f;
+    maxCount = 1.0f;
 }
 
 void buttonToggle::setMaxCounter(float nCounter){
@@ -28,6 +28,7 @@ void buttonToggle::setMaxCounter(float nCounter){
 void buttonToggle::setup( string onName, string offName,  bool startsActive, float xIn, float yIn, float w, float h){
     displayText[1] = onName;
     displayText[0] = offName;
+    
     active = startsActive;
     
     x		= xIn;

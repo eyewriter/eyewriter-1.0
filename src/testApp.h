@@ -45,7 +45,6 @@ class testApp : public ofBaseApp {
 
 		trackingManager			TM;
 		calibrationManager		CM;
-		buttonTrigger			BT;
         eyePlotterTestApp       eyeApp;
         typingScene				typeScene;
         pongScene				ponger;
@@ -54,6 +53,8 @@ class testApp : public ofBaseApp {
 		void drawHelp();
     
         float buttonTime;
+        buttonTrigger			BTrig;
+        buttonToggle            BTog;
 	
 };
 
