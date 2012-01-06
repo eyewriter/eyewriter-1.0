@@ -72,7 +72,7 @@ bool buttonTrigger::update(float xIn, float yIn){
         if(!active){
             if (firstTrigger){ 
                 timeStamp = currentTime;
-                cout << "hover timestamp: " << timeStamp << endl;
+                //cout << "hover timestamp: " << timeStamp << endl;
                 active = true;
                 firstTrigger = false;
             }
@@ -80,12 +80,12 @@ bool buttonTrigger::update(float xIn, float yIn){
         
         else{ 
             float timeDiff = currentTime - timeStamp;
-            cout << "timeDiff " << timeDiff << endl;
+            //cout << "timeDiff " << timeDiff << endl;
             pct = timeDiff/maxCount;
             
             if (timeDiff >= maxCount){
                 changed = true;
-                cout << "BUTTON TRIGGERED" << endl;
+                //cout << "BUTTON TRIGGERED" << endl;
                 if(allowRetrigger){
                     cout << "retrigger" << endl;
                     active = true;
@@ -243,4 +243,12 @@ void buttonTrigger::draw(string s){
         ofRect(x, y, width, height); 
         ofPopStyle();
     }
+}
+
+float buttonTrigger::getY(){
+    return y;
+}
+
+float buttonTrigger::getX(){
+    return x;
 }

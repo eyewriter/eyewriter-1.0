@@ -33,77 +33,83 @@ void typingScene::setup(){
 	};
 	
 	bSpeakWords = false;
-	
-	float xadd2 = 0;
-	float yadd2 = 150;
-	
-	
-	float xStart  = 10;
-	float yStart  = 15;
+
+    //button sensitivity in seconds
+	buttonCount=1.0f;
+    
+	float xStart  = 5;
+	float yStart  = 5;
 	float bWidth  = ofGetHeight()/8;
 	float bHeight = ofGetHeight()/8;
     
-    
-    //sensitivity in seconds
-	buttonCount=1.0f;
+    float xadd2 = 5;
+	float yadd2 = 5;
 	
 	for (int i = 0; i < 36; i++){
 		buttonTrigger nButton;
-		nButton.setup(buttons[i], xStart + xadd2, yStart + yadd2, bWidth, bHeight);
+		nButton.setup(buttons[i], xStart, ofGetHeight()/5 + yStart, bWidth, bHeight);
 		nButton.setMaxCounter(buttonCount);
 		nButton.setRetrigger(true);
-		letterButtons.push_back(nButton);
 		
-		xStart += ofGetWidth()/10;
-        if (xStart > ofGetWidth()){
-		//if (xStart > 1100){
-        //if (xStart > 900){
-			//xStart = bWidth + 15;
-            xStart = 10;
-			yStart += bHeight + 10;
+        letterButtons.push_back(nButton);
+		xStart += bWidth + xadd2;
+        
+        if (xStart > ofGetWidth() - xadd2*2){
+            xStart = 5;
+			yStart += bHeight + yadd2;
 		}
-		
 	}
 	
 	//float xadd = 150;
-    float xadd = 10;
+    float xadd = 5;
 	float yadd = 100;
+    float lowerMargin = letterButtons[35].getY(); //find y of last letter button
 	
-	bWidth  = ofGetHeight()/10;
-	bHeight = ofGetHeight()/10;
-	
-	//xadd = 350;
-    xadd = 0;
+	//bWidth  = ofGetHeight()/10;
+	//bHeight = ofGetHeight()/10;
+    
+	buttonToggle speakButton;
+	speakButton.setup("SPEAK ON", "SPEAK OFF", false, xadd, lowerMargin + yadd, bWidth, bHeight);
+	speakButton.setMaxCounter(buttonCount);
+	actionButtons.push_back(speakButton);
+    
+    buttonToggle capsButton;
+	capsButton.setup("CAPS ON", "CAPS OFF", false, bWidth*1 + xadd*2, lowerMargin + yadd, bWidth, bHeight);
+	capsButton.setMaxCounter(buttonCount);
+	actionButtons.push_back(capsButton);
 	
 	buttonTrigger semiButton;
-	semiButton.setup(":\n;", 825+xadd, 295+yadd, bWidth, bHeight);
+	semiButton.setup(":\n;", bWidth*8 + xadd*9, lowerMargin + yadd - (bHeight+yadd2), bWidth, bHeight);
 	semiButton.setMaxCounter(buttonCount);
 	semiButton.setRetrigger(false);
 	letterButtons.push_back(semiButton);
 	
 	buttonTrigger quoteButton;
-	quoteButton.setup("\"\n'", 915+xadd, 295+yadd, bWidth, bHeight);
+	quoteButton.setup("\"\n'", bWidth*9 + xadd*10, lowerMargin + yadd - (bHeight+yadd2), bWidth, bHeight);
 	quoteButton.setMaxCounter(buttonCount);
 	quoteButton.setRetrigger(false);
 	letterButtons.push_back(quoteButton);
+    
+	buttonTrigger periodButton;
+	periodButton.setup(">\n.", bWidth*7 + xadd*8, lowerMargin + yadd, bWidth, bHeight);//bWidth*9 + xadd*10, lowerMargin + yadd, bWidth, bHeight);
+	periodButton.setMaxCounter(buttonCount);
+	periodButton.setRetrigger(false);
+	letterButtons.push_back(periodButton);	
 	
-	buttonTrigger commaButton;
-	commaButton.setup("<\n,", 735+xadd, 385+yadd, bWidth, bHeight);
+    buttonTrigger commaButton;
+	commaButton.setup("<\n,", bWidth*8 + xadd*9, lowerMargin + yadd, bWidth, bHeight);//bWidth*7 + xadd*8, lowerMargin + yadd, bWidth, bHeight);
 	commaButton.setMaxCounter(buttonCount);
 	commaButton.setRetrigger(false);
 	letterButtons.push_back(commaButton);
 	
-	buttonTrigger periodButton;
-	periodButton.setup(">\n.", 825+xadd, 385+yadd, bWidth, bHeight);
-	periodButton.setMaxCounter(buttonCount);
-	periodButton.setRetrigger(false);
-	letterButtons.push_back(periodButton);
-	
 	buttonTrigger questionButton;
-	questionButton.setup("?\n/", 915+xadd, 385+yadd, bWidth, bHeight);
+	questionButton.setup("?\n/",bWidth*9 + xadd*10, lowerMargin + yadd, bWidth, bHeight);// bWidth*8 + xadd*9, lowerMargin + yadd, bWidth, bHeight);
 	questionButton.setMaxCounter(buttonCount);
 	questionButton.setRetrigger(false);
 	letterButtons.push_back(questionButton);
+	
+
+
 	
 	//buttonTrigger deleteButton;
 //	deleteButton.setup("ENTER", 735+xadd, 475+yadd, bWidth*2+15, bHeight);
@@ -113,40 +119,29 @@ void typingScene::setup(){
 	
 	
 	buttonTrigger speakAllButton;
-	speakAllButton.setup("SPEAK", 15, ofGetHeight()-bHeight, bWidth*2+15, bHeight);
+	speakAllButton.setup("SPEAK", xadd, ofGetHeight()-(bHeight+xadd), bWidth*2, bHeight);
 	speakAllButton.setMaxCounter(buttonCount);
 	speakAllButton.setRetrigger(false);
 	letterButtons.push_back(speakAllButton);
 	
 	
 	buttonTrigger clearButton;
-	clearButton.setup("CLEAR ALL", (bWidth*2)+15, ofGetHeight()-bHeight, bWidth*2+15, bHeight);
+	clearButton.setup("CLEAR ALL", (bWidth*2)+xadd*2, ofGetHeight()-(bHeight+xadd), bWidth*2+xadd, bHeight);
 	clearButton.setMaxCounter(buttonCount);
 	clearButton.setRetrigger(false);
 	letterButtons.push_back(clearButton);
     
     buttonTrigger enterButton;
-	enterButton.setup("DELETE", (bWidth*2)*2+15, ofGetHeight()-bHeight, bWidth*2+15, bHeight);
+	enterButton.setup("DELETE", (bWidth*4)+xadd*4, ofGetHeight()-(bHeight+xadd), bWidth*2+xadd*2, bHeight);
 	enterButton.setMaxCounter(buttonCount);
 	enterButton.setRetrigger(true);
 	letterButtons.push_back(enterButton);
 	
 	buttonTrigger spaceButton;
-	spaceButton.setup("SPACE", (bWidth*2)*3+15, ofGetHeight()-bHeight, bWidth*4.5+7, bHeight);
+	spaceButton.setup("SPACE", (bWidth*6)+xadd*7, ofGetHeight()-(bHeight+xadd), bWidth*4+xadd*3, bHeight);
 	spaceButton.setMaxCounter(buttonCount);
 	spaceButton.setRetrigger(false);
 	letterButtons.push_back(spaceButton);
-	
-	buttonToggle capsButton;
-	capsButton.setup("CAPS ON", "CAPS OFF", false, 800+xadd+100, 475+yadd, bWidth+15, bHeight);
-	capsButton.setMaxCounter(buttonCount);
-	actionButtons.push_back(capsButton);
-	
-	
-	buttonToggle speakButton;
-	speakButton.setup("SPEAK\nWORDS\nON", "SPEAK\nWORDS\nOFF", false, 800+xadd+100, 175+yadd, bWidth+15, bHeight);
-	speakButton.setMaxCounter(buttonCount);
-	actionButtons.push_back(speakButton);
 	
 	
 	//

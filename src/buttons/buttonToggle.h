@@ -22,6 +22,10 @@ class buttonToggle : public buttonRect{
 	bool    update(float xIn, float yIn);
 	bool    getState();
 	void    draw(float opacity = 255);
+    void    draw(string s);
+	int     fromString(const std::string& s);	
+    float   getY();
+    float   getX();
     
     float   timeDiff;
     float   timeStamp;

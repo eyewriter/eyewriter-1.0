@@ -153,6 +153,35 @@ void buttonToggle::draw(float opacity){
     ofDrawBitmapString(displayText[active], x + remainX, y + remainY);
 }
 
+int buttonToggle::fromString(const std::string& s){
+    std::istringstream stream (s);
+    int t;
+    stream >> t;
+    return t;
+}
 
+void buttonToggle::draw(string s){
+    
+    ofFill();
+    ofSetColor(fromString(s));
+    
+    float pctActive = ofMap(pct, 0.0, maxCount, 0.0, 110.0);		
+    ofRect(x, y, width, height); 
+    if (pct>.1){
+        ofPushStyle();
+        ofSetLineWidth(4);
+        ofNoFill();
+        
+        ofRect(x, y, width, height); 
+        ofPopStyle();
+    }
+}
 
+float buttonToggle::getY(){
+    return y;
+}
+
+float buttonToggle::getX(){
+    return x;
+}
 

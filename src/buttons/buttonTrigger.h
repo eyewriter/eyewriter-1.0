@@ -28,6 +28,8 @@ class buttonTrigger : public buttonRect{
 	void    setFlashLength(float timeF);
 	bool    update(float xIn, float yIn);
 	void    draw(float opacity = 255);
+    float   getY();
+    float   getX();
     
 	int     fromString(const std::string& s);	
 	void    draw(string s);	
