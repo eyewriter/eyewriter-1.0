@@ -48,8 +48,8 @@ void pongScene::update(float mouseX, float mouseY){
 		ballVelocity.y /= 1.5;
 	}
 	
-	//float speed = 60.0f / MAX( ofGetFrameRate() , 5);
-	float speed = 1.5f;
+	float speed = 60.0f / MAX( ofGetFrameRate() , 5);
+	//float speed = 1.5f;
 	
 	ballPoint.x += ballVelocity.x * speed;
 	ballPoint.y += ballVelocity.y * speed;
@@ -93,7 +93,7 @@ void pongScene::update(float mouseX, float mouseY){
 //--------------------------------------------------------------
 void pongScene::draw(){
 	ofPushStyle();	
-	
+    
 	ofFill();
 	ofSetColor(255 - rMod, 255 - gMod, 255 - bMod);
 	ofCircle(ballPoint.x, ballPoint.y, ballSize);
@@ -103,7 +103,7 @@ void pongScene::draw(){
 	ofRect(rectPoint.x, rectPoint.y, 110, 20);
 	ofSetRectMode(OF_RECTMODE_CORNER);
 	
-		
+    ofDrawBitmapString("fps: " + ofToString(ofGetFrameRate()), 20, 20);
 	ofPopStyle();
 	
 	fasterButton.draw(255);

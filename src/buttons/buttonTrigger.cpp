@@ -84,7 +84,7 @@ bool buttonTrigger::update(float xIn, float yIn){
             float timeDiff = currentTime - timeStamp;
             //cout << "timeDiff " << timeDiff << endl;
             pct = timeDiff/maxCount;
-            cout<<"pct: " << pct << endl;
+            //cout<<"pct: " << pct << endl;
             
             if (timeDiff >= maxCount){
                 changed = true;
