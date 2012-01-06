@@ -30,6 +30,7 @@ public:
 	void setup();
 	void update(float mouseX, float mouseY);
 	void draw();
+    void reColor();
 	
 	ofPoint ballPoint;
 	ofPoint rectPoint;
@@ -38,7 +39,10 @@ public:
 	
 	buttonTrigger fasterButton;
 	buttonTrigger slowerButton;
+    
+    int ballSize;
 	
+    float rMod, gMod, bMod;
 	
 };
 

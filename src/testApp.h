@@ -8,11 +8,15 @@
 #include "buttonTrigger.h"
 #include "typingScene.h"
 #include "pongScene.h"
+#include "testApp.h"
 #include "eyePlotterTestApp.h"
+#include "eyeOsc.h"
+
 
 enum{
 	
-	MODE_TRACKING,  MODE_CALIBRATING,   MODE_TEST,  MODE_DRAW,  MODE_TYPING,    MODE_PONG
+	MODE_TRACKING,  MODE_CALIBRATING,   MODE_TEST,  MODE_DRAW,  
+    MODE_TYPING,    MODE_PONG,          MODE_OSC
 
 };
 
@@ -48,13 +52,16 @@ class testApp : public ofBaseApp {
         eyePlotterTestApp       eyeApp;
         typingScene				typeScene;
         pongScene				ponger;
+        eyeOsc                  oscScene;
 	
 		//------ drawing
 		void drawHelp();
-    
-        float buttonTime;
+        
+        float buttonSensitivity;    
         buttonTrigger			BTrig;
         buttonToggle            BTog;
+    
+
 	
 };
 

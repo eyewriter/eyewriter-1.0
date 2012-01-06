@@ -8,6 +8,7 @@
  */
 
 #include "buttonTrigger.h"
+#include "testApp.h"
 
 buttonTrigger::buttonTrigger(){
     
@@ -15,13 +16,12 @@ buttonTrigger::buttonTrigger(){
     hasLeft = true;
     counter = 0.0f;
     pct = 0.0f;
-    maxCount = 1.0f;
-    //maxCount = ((trackingManager*)ofGetAppPtr())->buttonPressTime;
-    //maxCount = buttonPressTimer; //this is set from controlPanel
     allowRetrigger = false;
     numTriggers = 0;
     bFlash = false;
     bHasFont = false;   
+    // maxCount = 1.0f;
+    //maxCount = ((testApp *)ofGetAppPtr())->buttonSensitivity;
 }
 
 
@@ -47,6 +47,8 @@ void buttonTrigger::setup( string onName, float xIn, float yIn, float w, float h
     height	= h;
     numTriggers = 0;
     flashLength = 0.2;
+    
+    maxCount = ((testApp *)ofGetAppPtr())->buttonSensitivity;
 }
 
 int buttonTrigger::getNumTriggers(){
@@ -82,6 +84,7 @@ bool buttonTrigger::update(float xIn, float yIn){
             float timeDiff = currentTime - timeStamp;
             //cout << "timeDiff " << timeDiff << endl;
             pct = timeDiff/maxCount;
+            cout<<"pct: " << pct << endl;
             
             if (timeDiff >= maxCount){
                 changed = true;
@@ -176,7 +179,8 @@ void buttonTrigger::draw(float opacity){
     //float opacity = 255;
     ofFill();
     
-    float pctActive = ofMap(pct, 0.0, maxCount, 0.0, 110.0);		
+    float pctActive = ofMap(pct, 0.0, 1.5, 0.0, 110.0);
+	//cout <<"pctActive: " << pctActive << endl;
     
     //pctActive = ofClamp(pctActive, 0, 110.0);	
     if( bFlash){
@@ -227,7 +231,7 @@ void buttonTrigger::draw(string s){
     ofFill();
     ofSetColor(fromString(s));
     
-    float pctActive = ofMap(pct, 0.0, maxCount, 0.0, 110.0);		
+    float pctActive = ofMap(pct, 0.0, 1.5, 0.0, 110.0);		
     ofRect(x, y, width, height); 
     if (pct>.1){
         ofPushStyle();

@@ -28,12 +28,12 @@
 void inputManager::setup(){
 	
 	ofxXmlSettings XML;
-	XML.loadFile("settings/inputSettings.xml");
-	mode = XML.getValue("app:mode", 0);
+	XML.loadFile("settings/globalSettings.xml");
+	mode = XML.getValue("app:input:mode", 0);
 		
 	if (mode == INPUT_VIDEO){
 		//cout << "input manager: loading video file" << endl;
-		string movieToLoad = XML.getValue("app:videoFile", "");
+		string movieToLoad = XML.getValue("app:input:videoFile", "");
 		vidPlayer.loadMovie(movieToLoad);
 		vidPlayer.play();
 		width	= vidPlayer.width;
@@ -42,9 +42,9 @@ void inputManager::setup(){
 	
 	if (mode == INPUT_LIVE_VIDEO){
 		//cout << "input manager: grabbing video" << endl;
-		width = XML.getValue("app:videoGrabber:width", 640);
-		height = XML.getValue("app:videoGrabber:height", 480);
-		int device = XML.getValue("app:videoGrabber:deviceId", 0);
+		width = XML.getValue("app:input:videoGrabber:width", 640);
+		height = XML.getValue("app:input:videoGrabber:height", 480);
+		int device = XML.getValue("app:input:videoGrabber:deviceId", 0);
 		
 		if (device != 0){
 			vidGrabber.setDeviceID(device);

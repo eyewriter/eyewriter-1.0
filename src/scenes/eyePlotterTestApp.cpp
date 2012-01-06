@@ -1,4 +1,5 @@
 #include "eyePlotterTestApp.h"
+#include "testApp.h"
 
 int buttonCount = 1.0f;
 float rate = 1.8;
@@ -127,6 +128,8 @@ void eyePlotterTestApp::keyPressed  (int key){
 	buttonCount = ofClamp(buttonCount, 10, 120);
 	
 	smoothPct = ofClamp(smoothPct, 0, 1);
+    
+    buttonCount = ((testApp *)ofGetAppPtr())->buttonSensitivity;
 	
 	ghettoSettings.setValue("buttonCount", buttonCount);
 	ghettoSettings.setValue("rate", rate);

@@ -8,17 +8,15 @@
  */
 
 #include "buttonToggle.h"
-
 #include "testApp.h"
-//(testApp *)ofGetAppPtr()->buttonTime;
-
 
 buttonToggle::buttonToggle(){
     
     active  = false;
     hasLeft = true;
     counter = 0.0f;
-    maxCount = 1.0f;
+    //maxCount = ((testApp *)ofGetAppPtr())->buttonSensitivity;
+    //maxCount = 1.0f;
 }
 
 void buttonToggle::setMaxCounter(float nCounter){
@@ -26,6 +24,9 @@ void buttonToggle::setMaxCounter(float nCounter){
 }
 
 void buttonToggle::setup( string onName, string offName,  bool startsActive, float xIn, float yIn, float w, float h){
+    
+    maxCount = ((testApp *)ofGetAppPtr())->buttonSensitivity;
+    
     displayText[1] = onName;
     displayText[0] = offName;
     
@@ -48,7 +49,7 @@ bool buttonToggle::update(float xIn, float yIn){
         if(!turned){
             if (firstTrigger){ 
                 timeStamp = currentTime;
-                cout << "hover timestamp: " << timeStamp << endl;
+                //cout << "hover timestamp: " << timeStamp << endl;
                 turned = true;
                 firstTrigger = false;
             }
@@ -56,13 +57,13 @@ bool buttonToggle::update(float xIn, float yIn){
         
         else{ 
             float timeDiff = currentTime - timeStamp;
-            cout << "timeDiff " << timeDiff << endl;
+            //cout << "timeDiff " << timeDiff << endl;
             pct = timeDiff/maxCount;
             
             if (timeDiff >= maxCount){
                 active = !active;
                 changed = true;
-                cout << "BUTTON TRIGGERED" << endl;
+                //cout << "BUTTON TRIGGERED" << endl;
                 turned = false;
                 timeStamp = currentTime;
                 pct = 0.0f;
@@ -129,7 +130,7 @@ bool buttonToggle::getState(){
 void buttonToggle::draw(float opacity){
     ofFill();
     
-    float pctActive = ofMap(pct, 0.0, maxCount, 0.0, 110.0);			
+    float pctActive = ofMap(pct, 0.0, 1.5, 0.0, 110.0);			
     if( !active ){
         ofSetColor(160 - pctActive, 160 + pctActive, 160 - pctActive, opacity);
         //ofSetColor(180 - pctActive, 180.0, 180 - pctActive);
@@ -165,7 +166,7 @@ void buttonToggle::draw(string s){
     ofFill();
     ofSetColor(fromString(s));
     
-    float pctActive = ofMap(pct, 0.0, maxCount, 0.0, 110.0);		
+    float pctActive = ofMap(pct, 0.0, 1.5, 0.0, 110.0);		
     ofRect(x, y, width, height); 
     if (pct>.1){
         ofPushStyle();

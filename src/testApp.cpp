@@ -11,8 +11,12 @@ testApp::testApp(){
 //--------------------------------------------------------------
 void testApp::setup(){
 
-	
+    
 	//---- setup standard application settings
+    
+    ofxXmlSettings XML;
+	XML.loadFile("settings/globalSettings.xml"); //in app/bin/data/settings
+	buttonSensitivity = XML.getValue("app:button:sensitivity", 0);
 	
 	ofSetVerticalSync(true);  
 	
@@ -22,16 +26,14 @@ void testApp::setup(){
     eyeApp.setup();
 	typeScene.setup();
     ponger.setup();
-	
-	eyeSmoothed.set(0,0,0);
-	
+    oscScene.setup();
+
+	eyeSmoothed.set(0,0,0);	
 	
 	BTrig.setup("catch me!", 50,50,180,180);
-    BTrig.setMaxCounter(1.0); //button sensitivity
-    //BT.setMaxCounter(TM.getButtonPressTime());
+    //BTrig.setMaxCounter(1.0); //button sensitivity
     
     BTog.setup("on","off",false,250,250,180,180);
-    
     bMouseSimulation = false;
 }
 
@@ -112,6 +114,11 @@ void testApp::update(){
 			BTog.y = ofRandom(100,ofGetHeight()-100);
         }
 	}
+    
+    if (mode == MODE_OSC){
+        ofPoint pt = eyeSmoothed;
+        oscScene.update(pt.x, pt.y);
+    }
 }
 
 
@@ -128,6 +135,7 @@ void testApp::draw(){
     if (mode == MODE_DRAW )				eyeApp.draw();
 	if (mode == MODE_TYPING)			typeScene.draw();
 	if (mode == MODE_PONG)				ponger.draw();
+    if (mode == MODE_OSC)               oscScene.draw();
 	
 		
 	// draw a green dot to see how good the tracking is:
@@ -150,7 +158,7 @@ void testApp::keyPressed(int key){
 			
 		case	OF_KEY_RETURN:
 			mode ++;
-			mode %= 6; // number of modes;
+			mode %= 7; // number of modes;
 			break;
 	
 		case	'f':

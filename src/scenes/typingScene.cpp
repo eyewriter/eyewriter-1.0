@@ -8,6 +8,7 @@
  */
 
 #include "typingScene.h"
+#include "testApp.h"
 
 //switch to gui
 extern  int buttonCount; 
@@ -35,7 +36,8 @@ void typingScene::setup(){
 	bSpeakWords = false;
 
     //button sensitivity in seconds
-	buttonCount=1.0f;
+	//buttonCount=1.0f;
+    buttonCount = ((testApp *)ofGetAppPtr())->buttonSensitivity;
     
 	float xStart  = 5;
 	float yStart  = 5;

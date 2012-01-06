@@ -15,21 +15,23 @@ extern  int buttonCount;
 //--------------------------------------------------------------
 void pongScene::setup(){
 	
+    ballSize = 50;
 	ballPoint.set(20,20);
 	
 	ballVelocity.set(ofRandom(-5,5), ofRandom(2,9));
 	
-	
 	fasterButton.setup("FASTER", ofGetWidth()-220,10,100,100);
-	fasterButton.setMaxCounter(1.0f);
+	//fasterButton.setMaxCounter(1.0f);
 	fasterButton.setRetrigger(true);
 	
 	slowerButton.setup("SLOWER", ofGetWidth()-110,10,100,100);
-	slowerButton.setMaxCounter(1.0f);
+	//slowerButton.setMaxCounter(1.0f);
 	slowerButton.setRetrigger(true);
 	
-	
-	
+    //color stuff
+    rMod = ofRandom(0,200);
+    gMod = ofRandom(0,200);
+    bMod = ofRandom(0,200);
 }
 //--------------------------------------------------------------
 void pongScene::update(float mouseX, float mouseY){
@@ -46,29 +48,30 @@ void pongScene::update(float mouseX, float mouseY){
 		ballVelocity.y /= 1.5;
 	}
 	
-	float speed = 60.0f / MAX( ofGetFrameRate() , 5);
-	
+	//float speed = 60.0f / MAX( ofGetFrameRate() , 5);
+	float speed = 1.5f;
 	
 	ballPoint.x += ballVelocity.x * speed;
 	ballPoint.y += ballVelocity.y * speed;
 	
-	if (ballPoint.x < 0) {
-		ballPoint.x = 0;
+	if (ballPoint.x < ballSize) {
+		ballPoint.x = ballSize;
 		ballVelocity.x *= -1;
 	}
-	if (ballPoint.x > ofGetWidth()) {
-		ballPoint.x = ofGetWidth();
+	if (ballPoint.x > ofGetWidth()-ballSize) {
+		ballPoint.x = ofGetWidth()-ballSize;
 		ballVelocity.x *= -1;
 	}
-	if (ballPoint.y < 0) {
-		ballPoint.y = 0;
+	if (ballPoint.y < ballSize) {
+		ballPoint.y = ballSize;
 		ballVelocity.y *= -1;
 	}
 	
-	if (ballPoint.y > ofGetHeight()-60){
+	if (ballPoint.y > ofGetHeight()-95){
 		float diff = rectPoint.x - ballPoint.x;
 		if (fabs(diff) < 110/2){
-			ballPoint.y = ofGetHeight()-60;
+            reColor();
+			ballPoint.y = ofGetHeight()-95;
 			ballVelocity.y *= -1;
 		}
 	}
@@ -92,9 +95,10 @@ void pongScene::draw(){
 	ofPushStyle();	
 	
 	ofFill();
-	ofSetColor(255,255,255);
-	ofCircle(ballPoint.x, ballPoint.y, 50);
+	ofSetColor(255 - rMod, 255 - gMod, 255 - bMod);
+	ofCircle(ballPoint.x, ballPoint.y, ballSize);
 	
+    ofSetColor(255);
 	ofSetRectMode(OF_RECTMODE_CENTER);
 	ofRect(rectPoint.x, rectPoint.y, 110, 20);
 	ofSetRectMode(OF_RECTMODE_CORNER);
@@ -108,4 +112,10 @@ void pongScene::draw(){
 	//drawCursor();
 }
 
+void pongScene::reColor(){
+    
+    rMod = ofRandom(0,255);
+    gMod = ofRandom(0,255);
+    bMod = ofRandom(0,255);
+}
 
