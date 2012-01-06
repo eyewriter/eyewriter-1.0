@@ -23,7 +23,7 @@ colorChooser::colorChooser(){};
 
 void colorChooser::setup(int xx, int yy){
 	
-	if( colorXML.loadFile( "colors.xml" ) ){
+	if( colorXML.loadFile( "settings/colors.xml" ) ){
 	   numLibraries = colorXML.getNumTags( "LIBRARY" );
 		string libName;
 		for ( int i = 0; i < numLibraries; i++ ){

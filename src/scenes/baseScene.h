@@ -11,7 +11,6 @@
 
 #include "ofMain.h"
 #include "buttonRect.h"
-
 #include "defines.h"
 
 class baseScene{

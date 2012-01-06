@@ -56,7 +56,7 @@ void typingScene::setup(){
         letterButtons.push_back(nButton);
 		xStart += bWidth + xadd2;
         
-        if (xStart > ofGetWidth() - xadd2*2){
+        if (xStart > ofGetWidth() - bWidth){
             xStart = 5;
 			yStart += bHeight + yadd2;
 		}
@@ -64,61 +64,57 @@ void typingScene::setup(){
 	
 	//float xadd = 150;
     float xadd = 5;
-	float yadd = 100;
+	float yadd = 105;
     float lowerMargin = letterButtons[35].getY(); //find y of last letter button
 	
 	//bWidth  = ofGetHeight()/10;
 	//bHeight = ofGetHeight()/10;
     
-	buttonToggle speakButton;
-	speakButton.setup("SPEAK ON", "SPEAK OFF", false, xadd, lowerMargin + yadd, bWidth, bHeight);
+	/*buttonToggle speakButton;
+     speakButton.setup("SPEAK ON", "SPEAK OFF", false, bWidth*1 + xadd*2, lowerMargin + yadd, bWidth, bHeight);
 	speakButton.setMaxCounter(buttonCount);
-	actionButtons.push_back(speakButton);
+	actionButtons.push_back(speakButton);*/
     
     buttonToggle capsButton;
-	capsButton.setup("CAPS ON", "CAPS OFF", false, bWidth*1 + xadd*2, lowerMargin + yadd, bWidth, bHeight);
+	capsButton.setup("CAPS ON", "CAPS OFF", false, xadd, ofGetHeight() - yadd*2, bWidth, bHeight);//bWidth*1 + xadd*2, lowerMargin + yadd, bWidth, bHeight);
 	capsButton.setMaxCounter(buttonCount);
 	actionButtons.push_back(capsButton);
 	
 	buttonTrigger semiButton;
-	semiButton.setup(":\n;", bWidth*8 + xadd*9, lowerMargin + yadd - (bHeight+yadd2), bWidth, bHeight);
+	semiButton.setup(":\n;", bWidth*8 + xadd*9, ofGetHeight() - yadd*2 - (bHeight+yadd2), bWidth, bHeight);
 	semiButton.setMaxCounter(buttonCount);
 	semiButton.setRetrigger(false);
 	letterButtons.push_back(semiButton);
 	
 	buttonTrigger quoteButton;
-	quoteButton.setup("\"\n'", bWidth*9 + xadd*10, lowerMargin + yadd - (bHeight+yadd2), bWidth, bHeight);
+	quoteButton.setup("\"\n'", bWidth*9 + xadd*10, ofGetHeight() - yadd*2 - (bHeight+yadd2), bWidth, bHeight);
 	quoteButton.setMaxCounter(buttonCount);
 	quoteButton.setRetrigger(false);
 	letterButtons.push_back(quoteButton);
     
 	buttonTrigger periodButton;
-	periodButton.setup(">\n.", bWidth*7 + xadd*8, lowerMargin + yadd, bWidth, bHeight);//bWidth*9 + xadd*10, lowerMargin + yadd, bWidth, bHeight);
+	periodButton.setup(">\n.", bWidth*7 + xadd*8, ofGetHeight() - yadd*2, bWidth, bHeight);//bWidth*9 + xadd*10, lowerMargin + yadd, bWidth, bHeight);
 	periodButton.setMaxCounter(buttonCount);
 	periodButton.setRetrigger(false);
 	letterButtons.push_back(periodButton);	
 	
     buttonTrigger commaButton;
-	commaButton.setup("<\n,", bWidth*8 + xadd*9, lowerMargin + yadd, bWidth, bHeight);//bWidth*7 + xadd*8, lowerMargin + yadd, bWidth, bHeight);
+	commaButton.setup("<\n,", bWidth*8 + xadd*9, ofGetHeight() - yadd*2, bWidth, bHeight);//bWidth*7 + xadd*8, lowerMargin + yadd, bWidth, bHeight);
 	commaButton.setMaxCounter(buttonCount);
 	commaButton.setRetrigger(false);
 	letterButtons.push_back(commaButton);
 	
 	buttonTrigger questionButton;
-	questionButton.setup("?\n/",bWidth*9 + xadd*10, lowerMargin + yadd, bWidth, bHeight);// bWidth*8 + xadd*9, lowerMargin + yadd, bWidth, bHeight);
+	questionButton.setup("?\n/",bWidth*9 + xadd*10, ofGetHeight() - yadd*2, bWidth, bHeight);// bWidth*8 + xadd*9, lowerMargin + yadd, bWidth, bHeight);
 	questionButton.setMaxCounter(buttonCount);
 	questionButton.setRetrigger(false);
 	letterButtons.push_back(questionButton);
-	
-
-
-	
+    
 	//buttonTrigger deleteButton;
 //	deleteButton.setup("ENTER", 735+xadd, 475+yadd, bWidth*2+15, bHeight);
 //	deleteButton.setMaxCounter(buttonCount);
 //	deleteButton.setRetrigger(true);
 //	letterButtons.push_back(deleteButton);
-	
 	
 	buttonTrigger speakAllButton;
 	speakAllButton.setup("SPEAK", xadd, ofGetHeight()-(bHeight+xadd), bWidth*2, bHeight);
@@ -145,8 +141,6 @@ void typingScene::setup(){
 	spaceButton.setRetrigger(false);
 	letterButtons.push_back(spaceButton);
 	
-	
-	//
 	letterButtons_lower.push_back("1");
 	letterButtons_lower.push_back("2");
 	letterButtons_lower.push_back("3");
@@ -168,19 +162,15 @@ void typingScene::setup(){
 	letterButtons_lower.push_back("h");
 	letterButtons_lower.push_back("i");
 	letterButtons_lower.push_back("j");
-	
 	letterButtons_lower.push_back("k");
 	letterButtons_lower.push_back("l");
-	
 	letterButtons_lower.push_back("m");
-	
 	letterButtons_lower.push_back("n");
 	letterButtons_lower.push_back("o");
 	letterButtons_lower.push_back("p");
 	letterButtons_lower.push_back("q");
 	letterButtons_lower.push_back("r");
 	letterButtons_lower.push_back("s");
-	
 	letterButtons_lower.push_back("t");
 	letterButtons_lower.push_back("u");
 	letterButtons_lower.push_back("v");
@@ -189,7 +179,6 @@ void typingScene::setup(){
 	letterButtons_lower.push_back("y");
 	letterButtons_lower.push_back("z");
 	letterButtons_lower.push_back(";");
-	
 	letterButtons_lower.push_back("'");
 	letterButtons_lower.push_back(",");
 	letterButtons_lower.push_back(".");
@@ -197,17 +186,13 @@ void typingScene::setup(){
 	
 	
 	for (int i = 0; i < letterButtons.size(); i++){
-		
 		letterButtons[i].setDisplayFont(&franklinBookSmall);
 	}
 	
 	mx = 0.0;
 	my = 0.0; 
-	
-	
-	
-	
 }
+
 //--------------------------------------------------------------
 void typingScene::update(float mouseX, float mouseY){
 	mx = mouseX;
@@ -232,14 +217,13 @@ void typingScene::update(float mouseX, float mouseY){
 				if (bSpeakWords == true){
 				vector <string> wordsToSpeak = ofSplitString(displayMessage, " ");
 				
-				if (wordsToSpeak.size() > 0 && displayMessage.size() >= 1){
-					if (displayMessage[displayMessage.size()-1] != ' '){
-						
-					if (wordsToSpeak[wordsToSpeak.size()-1].size() > 0){
-						speakMe(	wordsToSpeak[wordsToSpeak.size()-1].c_str() );
-					}
-					}
-				}
+                    if (wordsToSpeak.size() > 0 && displayMessage.size() >= 1){
+                        if (displayMessage[displayMessage.size()-1] != ' '){
+                            if (wordsToSpeak[wordsToSpeak.size()-1].size() > 0){
+                                speakMe(	wordsToSpeak[wordsToSpeak.size()-1].c_str() );
+                            }
+                        }
+                    }
 				}
 				displayMessage.push_back(' ');
 				carriageReturnCounter++;
@@ -254,7 +238,6 @@ void typingScene::update(float mouseX, float mouseY){
 					speakMe(displayMessage.c_str());
 				}
 			}
-			
 			else if (letterButtons[i].displayText == "DELETE"){
 				if (displayMessage.size()> 0){
 					displayMessage.resize (displayMessage.size () - 1);
@@ -346,13 +329,13 @@ void typingScene::update(float mouseX, float mouseY){
 	
 	
 	bSpeakWords = false;
-	for (int i = 0; i < actionButtons.size(); i++){
+	/*for (int i = 0; i < actionButtons.size(); i++){
 		if (actionButtons[i].displayText[1] == "SPEAK\nWORDS\nON"){
 			if (actionButtons[i].active){
 				bSpeakWords = true;	
 			}
 		}
-	}
+	}*/
 	
 	//displayMessage = "";
 	//for (int i = 0; i < displayMessage.size(); i++){

@@ -3,12 +3,12 @@
 
 
 #include "ofMain.h"
+#include "testApp.h"
 #include "trackingManager.h"	
 #include "calibrationManager.h"
 #include "testingScene.h"
 #include "typingScene.h"
 #include "pongScene.h"
-#include "testApp.h"
 #include "eyePlotterTestApp.h"
 #include "eyeOsc.h"
 

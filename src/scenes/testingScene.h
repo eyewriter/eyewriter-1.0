@@ -6,10 +6,13 @@
 //  Copyright 2012 Saavedra. All rights reserved.
 //
 
+#pragma once
+
 #include "ofMain.h"
 #include "baseScene.h"
 #include "buttonTrigger.h"
 #include "buttonToggle.h"
+
 
 class testingScene : public baseScene{
     
@@ -18,7 +21,13 @@ class testingScene : public baseScene{
     void setup();
     void update(float eyeX, float eyeY);
     void draw();
+    void mouseDragged(int x, int y, int button);
     
-    buttonTrigger			BTrig;
-    buttonToggle            BTog;
+    buttonTrigger       BTrig;
+    buttonToggle        BTog;
+    
+    buttonTrigger       decSensitivity;
+    buttonTrigger       incSensitivity;
+    
+    float               currSensitivity;
 };

@@ -25,7 +25,7 @@
     <!-- button settings -->
     <button>
     	<!-- sensitivity in seconds -->
-    	<sensitivity> 1.2 </sensitivity>
+    	<sensitivity> 0.8 </sensitivity>
     	
     	<!-- color scheme -->
     	<color>#34AF99</color>

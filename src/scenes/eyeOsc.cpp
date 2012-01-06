@@ -40,7 +40,7 @@ void eyeOsc::update(float eyeX, float eyeY){
 void eyeOsc::draw(){
     
     ofFill();
-    ofSetColor(255);
+    ofSetColor(255,255,255);
     ofDrawBitmapString( ">>> eyeOSC <<<", 10, 20 );
    	string buf;
 	buf = "sending osc messages to: " + string( HOST ) + " on port: " + ofToString( PORT );

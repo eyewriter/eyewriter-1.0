@@ -11,16 +11,16 @@ testApp::testApp(){
 //--------------------------------------------------------------
 void testApp::setup(){
 
-    
 	//---- setup standard application settings
     
     ofxXmlSettings XML;
 	XML.loadFile("settings/globalSettings.xml"); //in app/bin/data/settings
-	buttonSensitivity = XML.getValue("app:button:sensitivity", 0);
-	
+	buttonSensitivity = XML.getValue("app:button:sensitivity", 0.0);
+    
 	ofSetVerticalSync(true);  
 	
 	mode = MODE_TRACKING;
+    
 	TM.setup();
 	CM.setup();
     testScene.setup();
@@ -34,11 +34,9 @@ void testApp::setup(){
     bMouseSimulation = false;
 }
 
-
-
 //--------------------------------------------------------------
 void testApp::update(){
-
+  
 	ofBackground(70,70,70);
 	
 	// update the tracking manager (and internally, its input manager)
@@ -56,7 +54,6 @@ void testApp::update(){
 			CM.inputEnergy = 1;
 		}
 	}
-    
     
     // smooth eye data in...
     if (!bMouseSimulation){
@@ -82,12 +79,9 @@ void testApp::update(){
 		eyeSmoothed.y = mouseY;
     }
     
-    
-    
 	if( mode == MODE_DRAW ){
 		ofPoint pt = eyeSmoothed;
-        if(bMouseSimulation) eyeApp.update( mouseX, mouseY );
-        else eyeApp.update( pt.x, pt.y);
+        eyeApp.update( pt.x, pt.y);
 	}
 	
 	if (mode == MODE_TYPING){
@@ -183,7 +177,7 @@ void testApp::mouseDragged(int x, int y, int button){
 	
 	if (mode == MODE_TRACKING)			TM.mouseDragged(x, y, button);
 	if (mode == MODE_CALIBRATING)		CM.mouseDragged(x, y, button);
-
+    if (mode == MODE_TEST)              testScene.mouseDragged(x, y, button);
 }
 
 //--------------------------------------------------------------

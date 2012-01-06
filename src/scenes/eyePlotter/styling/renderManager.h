@@ -52,7 +52,7 @@ class renderManager{
 
 				ofEnableAlphaBlending();
 				dot.getTextureReference().bind();
-				ofSetColor(curStyle.colors["outlineColor"]);
+				ofSetHexColor(curStyle.colors["outlineColor"]);
 				int shiftX = curStyle.atts["dropShadowX"];
 				int shiftY = curStyle.atts["dropShadowY"];
 				
@@ -115,7 +115,7 @@ class renderManager{
 
 				if (curStyle.atts["strokeWeight"]!=0){
 					/// BACK STROKE ///////////////////////////////////////////////
-					ofSetColor(curStyle.colors["strokeColor"]);
+					ofSetHexColor(curStyle.colors["strokeColor"]);
 					ofSetLineWidth(curStyle.atts["strokeWeight"]);
 					ofNoFill();
 					ofBeginShape();
@@ -129,7 +129,7 @@ class renderManager{
 				
 				if (shiftX != 0 || shiftY!=0){
 				//// DROP SHADOW BASIC /////////////////////////////////////////
-				ofSetColor(curStyle.colors["shadowColor"]);
+				ofSetHexColor(curStyle.colors["shadowColor"]);
 				for(int p = 0; p < curStroke.pts.size()-1; p++){
 					//ofLine(curGroup.strokes[i].pts[k].x, curGroup.strokes[i].pts[k].y,curGroup.strokes[i].pts[k].x-50, curGroup.strokes[i].pts[k].y);
 					ofVec2f dir = curStroke.pts[p+1] - curStroke.pts[p];
@@ -137,7 +137,7 @@ class renderManager{
 					if (i == 1) dot*=-1;
 					(curStyle.dotShadow) ? ((dot < 0) ? ofSetColor(((curStyle.colors["shadowColor"] >> 16) & 0xff)*.4,
 																		  ((curStyle.colors["shadowColor"] >> 8) & 0xff)*.4,
-																		  ((curStyle.colors["shadowColor"] >> 0) & 0xff)*.4) : ofSetColor(curStyle.colors["shadowColor"])) : ofSetColor(curStyle.colors["shadowColor"]);
+																		  ((curStyle.colors["shadowColor"] >> 0) & 0xff)*.4) : ofSetHexColor(curStyle.colors["shadowColor"])) : ofSetHexColor(curStyle.colors["shadowColor"]);
 					ofFill();
 					ofBeginShape();
 					ofVertex(curStroke.pts[p].x, curStroke.pts[p].y);
@@ -182,7 +182,7 @@ class renderManager{
 
 					if (curStyle.atts["strokeWeight"]!=0){
 					/// CORNER LINES //////////////////////////////////////////////
-					ofSetColor(curStyle.colors["strokeColor"]);
+					ofSetHexColor(curStyle.colors["strokeColor"]);
 					ofSetLineWidth(curStyle.atts["strokeWeight"]);
 					for(int p = 0; p < curStroke.pts.size(); p++){
 						ofLine(curStroke.pts[p].x, curStroke.pts[p].y,curStroke.pts[p].x + shiftX, curStroke.pts[p].y + shiftY);
@@ -192,7 +192,7 @@ class renderManager{
 					
 				if (curStyle.atts["strokeWeight"] > 2){
 					/// DROP SHADOW CORNER DOTS ///////////////////////////////////
-					ofSetColor(curStyle.colors["strokeColor"]);
+					ofSetHexColor(curStyle.colors["strokeColor"]);
 					ofFill();
 					for(int p = 0; p < curStroke.pts.size(); p++){
 						ofCircle(curStroke.pts[p].x+shiftX, curStroke.pts[p].y+shiftY,.5*curStyle.atts["strokeWeight"]);
@@ -216,7 +216,7 @@ class renderManager{
 				if( bHoles ){
 			
 					ofPushStyle();
-						ofSetColor(curStyle.colors["fillColor"]);
+						ofSetHexColor(curStyle.colors["fillColor"]);
 						ofFill();
 						ofBeginShape();
 						for (int s = 0; s < curGroup.strokes.size(); s++){
@@ -232,7 +232,7 @@ class renderManager{
 				}else{
 					ofPushStyle();
 						ofFill();
-						ofSetColor(curStyle.colors["fillColor"]);														
+						ofSetHexColor(curStyle.colors["fillColor"]);														
 						for (int s = 0; s < curGroup.strokes.size(); s++){
 							ofBeginShape();
 								/// MAIN LETTER FILL //////////////////////////////////////////
@@ -257,7 +257,7 @@ class renderManager{
 
 				if (curStyle.atts["strokeWeight"]!=0){
 				/// MAIN LETTER STROKE ///////////////////////////////////////
-				ofSetColor(curStyle.colors["strokeColor"]);
+				ofSetHexColor(curStyle.colors["strokeColor"]);
 				ofSetLineWidth(curStyle.atts["strokeWeight"]);
 					
 					switch(curStyle.atts["brushId"]){	
