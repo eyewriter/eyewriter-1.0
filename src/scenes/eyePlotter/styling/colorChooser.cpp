@@ -1,5 +1,5 @@
 /*
- *  colorPicker.cpp
+ *  colorChooser.cpp
  *  openFrameworks
  *
  *  Created by Keith on 8/22/09.
@@ -7,7 +7,7 @@
  *
  */
 
-#include "colorPicker.h"
+#include "colorChooser.h"
 
 extern int buttonCount;
 
@@ -19,9 +19,9 @@ std::string toString(const T& t)
 	return stream.str();
 }
 
-colorPicker::colorPicker(){};
+colorChooser::colorChooser(){};
 
-void colorPicker::setup(int xx, int yy){
+void colorChooser::setup(int xx, int yy){
 	
 	if( colorXML.loadFile( "colors.xml" ) ){
 	   numLibraries = colorXML.getNumTags( "LIBRARY" );
@@ -67,7 +67,7 @@ void colorPicker::setup(int xx, int yy){
 	prevPage.setRetrigger(true);	
 }
 
-int colorPicker::update(int mx, int my){
+int colorChooser::update(int mx, int my){
 	if(nextPage.update( mx - x, my - y)) {
 		( curPage < maxPages ) ? curPage++ : curPage = 0;
 	}
@@ -84,7 +84,7 @@ int colorPicker::update(int mx, int my){
 	return outColor;
 }
 
-void colorPicker::draw(int xx, int yy){
+void colorChooser::draw(int xx, int yy){
 	xx != x ? x = xx : x=x;
 	yy != y ? y = yy : y=y;
 	

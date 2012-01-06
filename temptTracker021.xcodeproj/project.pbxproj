@@ -38,7 +38,7 @@
 		E28FC7F514B397EB00C62C04 /* strokeThumbnails.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7C014B397EB00C62C04 /* strokeThumbnails.cpp */; };
 		E28FC7F614B397EB00C62C04 /* strokeUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7C214B397EB00C62C04 /* strokeUtils.cpp */; };
 		E28FC7F714B397EB00C62C04 /* styleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7C414B397EB00C62C04 /* styleScene.cpp */; };
-		E28FC7F814B397EB00C62C04 /* colorPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7C714B397EB00C62C04 /* colorPicker.cpp */; };
+		E28FC7F814B397EB00C62C04 /* colorChooser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7C714B397EB00C62C04 /* colorChooser.cpp */; };
 		E28FC7F914B397EB00C62C04 /* groupStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7C914B397EB00C62C04 /* groupStyle.cpp */; };
 		E28FC7FA14B397EB00C62C04 /* renderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7CB14B397EB00C62C04 /* renderManager.cpp */; };
 		E28FC7FB14B397EB00C62C04 /* eyePlotterTestApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7CD14B397EB00C62C04 /* eyePlotterTestApp.cpp */; };
@@ -55,6 +55,7 @@
 		E28FC80614B397EB00C62C04 /* inputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7E414B397EB00C62C04 /* inputManager.cpp */; };
 		E28FC80714B397EB00C62C04 /* ofxCvGrayscaleAdvanced.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7E614B397EB00C62C04 /* ofxCvGrayscaleAdvanced.cpp */; };
 		E28FC80814B397EB00C62C04 /* trackingManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E28FC7E814B397EB00C62C04 /* trackingManager.cpp */; };
+		E2AC662314B76B6700E65D0D /* testingScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2AC662214B76B6700E65D0D /* testingScene.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
 		E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
@@ -217,8 +218,8 @@
 		E28FC7C314B397EB00C62C04 /* strokeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strokeUtils.h; sourceTree = "<group>"; };
 		E28FC7C414B397EB00C62C04 /* styleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = styleScene.cpp; sourceTree = "<group>"; };
 		E28FC7C514B397EB00C62C04 /* styleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = styleScene.h; sourceTree = "<group>"; };
-		E28FC7C714B397EB00C62C04 /* colorPicker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = colorPicker.cpp; sourceTree = "<group>"; };
-		E28FC7C814B397EB00C62C04 /* colorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colorPicker.h; sourceTree = "<group>"; };
+		E28FC7C714B397EB00C62C04 /* colorChooser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = colorChooser.cpp; sourceTree = "<group>"; };
+		E28FC7C814B397EB00C62C04 /* colorChooser.h */ = {isa = PBXFileReference; fileEncoding = 4; path = colorChooser.h; sourceTree = "<group>"; };
 		E28FC7C914B397EB00C62C04 /* groupStyle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = groupStyle.cpp; sourceTree = "<group>"; };
 		E28FC7CA14B397EB00C62C04 /* groupStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = groupStyle.h; sourceTree = "<group>"; };
 		E28FC7CB14B397EB00C62C04 /* renderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = renderManager.cpp; sourceTree = "<group>"; };
@@ -250,6 +251,8 @@
 		E28FC7E714B397EB00C62C04 /* ofxCvGrayscaleAdvanced.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCvGrayscaleAdvanced.h; sourceTree = "<group>"; };
 		E28FC7E814B397EB00C62C04 /* trackingManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = trackingManager.cpp; sourceTree = "<group>"; };
 		E28FC7E914B397EB00C62C04 /* trackingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trackingManager.h; sourceTree = "<group>"; };
+		E2AC662214B76B6700E65D0D /* testingScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testingScene.cpp; sourceTree = "<group>"; };
+		E2AC662414B76B9700E65D0D /* testingScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testingScene.h; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
 		E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
@@ -600,9 +603,9 @@
 		E28FC7AE14B397EB00C62C04 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E28FC7B114B397EB00C62C04 /* eyePlotter */,
 				E28FC7AF14B397EB00C62C04 /* baseScene.cpp */,
 				E28FC7B014B397EB00C62C04 /* baseScene.h */,
-				E28FC7B114B397EB00C62C04 /* eyePlotter */,
 				E28FC7CD14B397EB00C62C04 /* eyePlotterTestApp.cpp */,
 				E28FC7CE14B397EB00C62C04 /* eyePlotterTestApp.h */,
 				E28FC7CF14B397EB00C62C04 /* pongScene.cpp */,
@@ -611,6 +614,8 @@
 				E28FC7D214B397EB00C62C04 /* saverScene.h */,
 				E28FC7D314B397EB00C62C04 /* speak.h */,
 				E28FC7D414B397EB00C62C04 /* speak.m */,
+				E2AC662214B76B6700E65D0D /* testingScene.cpp */,
+				E2AC662414B76B9700E65D0D /* testingScene.h */,
 				E28FC7D514B397EB00C62C04 /* typingScene.cpp */,
 				E28FC7D614B397EB00C62C04 /* typingScene.h */,
 				E271ED8614B69272006C4795 /* eyeOsc.cpp */,
@@ -657,8 +662,8 @@
 		E28FC7C614B397EB00C62C04 /* styling */ = {
 			isa = PBXGroup;
 			children = (
-				E28FC7C714B397EB00C62C04 /* colorPicker.cpp */,
-				E28FC7C814B397EB00C62C04 /* colorPicker.h */,
+				E28FC7C714B397EB00C62C04 /* colorChooser.cpp */,
+				E28FC7C814B397EB00C62C04 /* colorChooser.h */,
 				E28FC7C914B397EB00C62C04 /* groupStyle.cpp */,
 				E28FC7CA14B397EB00C62C04 /* groupStyle.h */,
 				E28FC7CB14B397EB00C62C04 /* renderManager.cpp */,
@@ -898,7 +903,7 @@
 				E28FC7F514B397EB00C62C04 /* strokeThumbnails.cpp in Sources */,
 				E28FC7F614B397EB00C62C04 /* strokeUtils.cpp in Sources */,
 				E28FC7F714B397EB00C62C04 /* styleScene.cpp in Sources */,
-				E28FC7F814B397EB00C62C04 /* colorPicker.cpp in Sources */,
+				E28FC7F814B397EB00C62C04 /* colorChooser.cpp in Sources */,
 				E28FC7F914B397EB00C62C04 /* groupStyle.cpp in Sources */,
 				E28FC7FA14B397EB00C62C04 /* renderManager.cpp in Sources */,
 				E28FC7FB14B397EB00C62C04 /* eyePlotterTestApp.cpp in Sources */,
@@ -920,6 +925,7 @@
 				E271ED7F14B68563006C4795 /* ofxOscReceiver.cpp in Sources */,
 				E271ED8014B68563006C4795 /* ofxOscSender.cpp in Sources */,
 				E271ED8714B69272006C4795 /* eyeOsc.cpp in Sources */,
+				E2AC662314B76B6700E65D0D /* testingScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

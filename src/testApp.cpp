@@ -23,6 +23,7 @@ void testApp::setup(){
 	mode = MODE_TRACKING;
 	TM.setup();
 	CM.setup();
+    testScene.setup();
     eyeApp.setup();
 	typeScene.setup();
     ponger.setup();
@@ -30,10 +31,6 @@ void testApp::setup(){
 
 	eyeSmoothed.set(0,0,0);	
 	
-	BTrig.setup("catch me!", 50,50,180,180);
-    //BTrig.setMaxCounter(1.0); //button sensitivity
-    
-    BTog.setup("on","off",false,250,250,180,180);
     bMouseSimulation = false;
 }
 
@@ -86,6 +83,7 @@ void testApp::update(){
     }
     
     
+    
 	if( mode == MODE_DRAW ){
 		ofPoint pt = eyeSmoothed;
         if(bMouseSimulation) eyeApp.update( mouseX, mouseY );
@@ -105,14 +103,7 @@ void testApp::update(){
 	
 	if (mode == MODE_TEST){
 		ofPoint pt = eyeSmoothed;
-		if (BTrig.update(pt.x, pt.y)){
-			BTrig.x = ofRandom(100,ofGetWidth()-100);
-			BTrig.y = ofRandom(100,ofGetHeight()-100);
-		}
-        else if (BTog.update(pt.x, pt.y)){
-            BTog.x = ofRandom(100,ofGetWidth()-100);
-			BTog.y = ofRandom(100,ofGetHeight()-100);
-        }
+        testScene.update(pt.x, pt.y);
 	}
     
     if (mode == MODE_OSC){
@@ -131,7 +122,7 @@ void testApp::draw(){
 	
 	if (mode == MODE_TRACKING)			TM.draw();
 	if (mode == MODE_CALIBRATING)		CM.draw();
-	if (mode == MODE_TEST){				BTrig.draw(); BTog.draw();}
+	if (mode == MODE_TEST)				testScene.draw();
     if (mode == MODE_DRAW )				eyeApp.draw();
 	if (mode == MODE_TYPING)			typeScene.draw();
 	if (mode == MODE_PONG)				ponger.draw();

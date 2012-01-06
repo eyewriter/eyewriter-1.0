@@ -5,7 +5,7 @@
 #include "ofMain.h"
 #include "trackingManager.h"	
 #include "calibrationManager.h"
-#include "buttonTrigger.h"
+#include "testingScene.h"
 #include "typingScene.h"
 #include "pongScene.h"
 #include "testApp.h"
@@ -49,6 +49,7 @@ class testApp : public ofBaseApp {
 
 		trackingManager			TM;
 		calibrationManager		CM;
+        testingScene            testScene;
         eyePlotterTestApp       eyeApp;
         typingScene				typeScene;
         pongScene				ponger;
@@ -57,12 +58,7 @@ class testApp : public ofBaseApp {
 		//------ drawing
 		void drawHelp();
         
-        float buttonSensitivity;    
-        buttonTrigger			BTrig;
-        buttonToggle            BTog;
-    
-
-	
+        float buttonSensitivity;     
 };
 
 #endif

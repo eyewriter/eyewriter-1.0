@@ -23,7 +23,7 @@
 //#include "grafIO.h"
 
 #include "baseScene.h"
-#include "colorPicker.h"
+#include "colorChooser.h"
 
 typedef enum{
 	STYLE_ALL,
@@ -82,7 +82,7 @@ class styleScene : public baseScene{
 		styleState state;
 		buttonState testState;
 	
-		colorPicker cPicker;
+		colorChooser cPicker;
 								
 };
 

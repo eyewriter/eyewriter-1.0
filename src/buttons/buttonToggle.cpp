@@ -73,6 +73,7 @@ bool buttonToggle::update(float xIn, float yIn){
     else { //mouse not inRect
         turned = false;
         firstTrigger = true;
+        pct = 0.0f;
     }
     
     return changed;

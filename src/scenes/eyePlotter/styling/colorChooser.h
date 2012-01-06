@@ -1,5 +1,5 @@
 /*
- *  colorPicker.h
+ *  colorChooser.h
  *  openFrameworks
  *
  *  Created by Keith on 8/22/09.
@@ -17,7 +17,7 @@
 
 using namespace std;
 
-class colorPicker{
+class colorChooser{
 	public:
 	
 	//vector < int > colors;  // deprecated
@@ -40,7 +40,7 @@ class colorPicker{
 	string curLibrary;
 	
 	
-	colorPicker();
+	colorChooser();
 	void setup(int xx, int yy);
 	
 	int update(int mx, int my);
