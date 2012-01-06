@@ -1,0 +1,41 @@
+<app>
+	
+	<!-- input mode and settings -->
+	<input>
+	
+		<!-- mode, input 0 = live, 1 = video  -->
+		<mode>1</mode>
+		
+		<!-- if mode is video, choose file -->
+    	<videoFile>movies/eyeWriting.mov</videoFile>
+    	
+    	<!-- camera settings -->
+    	<videoGrabber>
+    	
+			<!-- add a device id if you want -->
+			<deviceId>  </deviceId>
+			
+			<!-- camera image dimensions -->
+			<width>640</width>
+			<height>480</height>
+		</videoGrabber>
+    </input>
+    
+    
+    <!-- button settings -->
+    <button>
+    	<!-- sensitivity in seconds -->
+    	<sensitivity> 2.0 </sensitivity>
+    	
+    	<!-- color scheme -->
+    	<color>#34AF99</color>
+    </button>
+    
+    
+    <!-- OSC settings -->
+    <osc>
+    	<host>localhost</host>
+    	<port>7401</port>
+    </osc>
+
+</app>
