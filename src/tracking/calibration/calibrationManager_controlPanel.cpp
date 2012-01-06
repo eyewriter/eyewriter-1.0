@@ -2,7 +2,7 @@
 
 void calibrationManager::setupControlPanel(){
 
-	panel.setup("calibration", 900, 10, 270, 500);
+	panel.setup("calibration", ofGetWidth()-280, 10, 270, 500);
 	panel.addPanel("auto calibration", 1, false);
 	panel.addPanel("display calibration data", 1, false);
 	panel.addPanel("calibration setup", 1, false);
