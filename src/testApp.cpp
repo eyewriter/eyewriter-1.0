@@ -28,6 +28,7 @@ void testApp::setup(){
 	typeScene.setup();
     ponger.setup();
     oscScene.setup();
+    mouseScene.setup();
 
 	eyeSmoothed.set(0,0,0);	
 	
@@ -104,6 +105,11 @@ void testApp::update(){
         ofPoint pt = eyeSmoothed;
         oscScene.update(pt.x, pt.y);
     }
+    
+    if (mode == MODE_MOUSE){
+        ofPoint pt = eyeSmoothed;
+        mouseScene.update(pt);
+    }
 }
 
 
@@ -121,6 +127,7 @@ void testApp::draw(){
 	if (mode == MODE_TYPING)			typeScene.draw();
 	if (mode == MODE_PONG)				ponger.draw();
     if (mode == MODE_OSC)               oscScene.draw();
+    if (mode == MODE_MOUSE)             mouseScene.draw(); 
 	
 		
 	// draw a green dot to see how good the tracking is:
@@ -143,7 +150,7 @@ void testApp::keyPressed(int key){
 			
 		case	OF_KEY_RETURN:
 			mode ++;
-			mode %= 7; // number of modes;
+			mode %= 8; // number of modes;
 			break;
 	
 		case	'f':
@@ -157,19 +164,18 @@ void testApp::keyPressed(int key){
 			break;
 	}
 	
-	if (mode == MODE_CALIBRATING){
-		CM.keyPressed(key);
-	}
+	if (mode == MODE_CALIBRATING)		CM.keyPressed(key);
+    if (mode == MODE_MOUSE)             mouseScene.keyPressed(key);
 }
 
 //--------------------------------------------------------------
 void testApp::keyReleased(int key){
-
+    if (mode == MODE_MOUSE)             mouseScene.keyReleased(key);
 }
 
 //--------------------------------------------------------------
 void testApp::mouseMoved(int x, int y ){
-	
+	if (mode == MODE_MOUSE)             mouseScene.mouseMoved(x, y);
 }
 
 //--------------------------------------------------------------
@@ -178,6 +184,7 @@ void testApp::mouseDragged(int x, int y, int button){
 	if (mode == MODE_TRACKING)			TM.mouseDragged(x, y, button);
 	if (mode == MODE_CALIBRATING)		CM.mouseDragged(x, y, button);
     if (mode == MODE_TEST)              testScene.mouseDragged(x, y, button);
+    if (mode == MODE_MOUSE)             mouseScene.mouseDragged(x, y, button);
 }
 
 //--------------------------------------------------------------
@@ -186,8 +193,7 @@ void testApp::mousePressed(int x, int y, int button){
 	
 	if (mode == MODE_TRACKING)			TM.mousePressed(x, y, button);
 	if (mode == MODE_CALIBRATING)		CM.mousePressed(x, y, button);
-
-
+    if (mode == MODE_MOUSE)             mouseScene.mousePressed(x, y, button);
 }
 
 //--------------------------------------------------------------
@@ -195,7 +201,7 @@ void testApp::mouseReleased(int x, int y, int button){
 	
 	if (mode == MODE_TRACKING)			TM.mouseReleased();
 	if (mode == MODE_CALIBRATING)		CM.mouseReleased(x,y,button);
-
+    if (mode == MODE_MOUSE)             mouseScene.mouseReleased(x, y, button);
 }
 
 

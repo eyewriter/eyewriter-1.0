@@ -42,9 +42,9 @@ void eyeOsc::draw(){
     ofFill();
     ofSetColor(255,255,255);
     ofDrawBitmapString( ">>> eyeOSC <<<", 10, 20 );
-   	string buf;
-	buf = "sending osc messages to: " + string( HOST ) + " on port: " + ofToString( PORT );
-	ofDrawBitmapString( buf, 10, 40 );
+   	string info;
+	info = "sending osc messages to: " + string( HOST ) + " on port: " + ofToString( PORT );
+	ofDrawBitmapString( info, 10, 40 );
 
     ofDrawBitmapString( "/eye/pos/x " + ofToString(x), x + 50, y );
     ofDrawBitmapString( "/eye/pos/y " + ofToString(y), x, y - 50 );

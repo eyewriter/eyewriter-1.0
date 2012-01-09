@@ -11,12 +11,13 @@
 #include "pongScene.h"
 #include "eyePlotterTestApp.h"
 #include "eyeOsc.h"
+#include "mouseControl.h"
 
 
 enum{
 	
 	MODE_TRACKING,  MODE_CALIBRATING,   MODE_TEST,  MODE_DRAW,  
-    MODE_TYPING,    MODE_PONG,          MODE_OSC
+    MODE_TYPING,    MODE_PONG,          MODE_OSC,   MODE_MOUSE
 
 };
 
@@ -54,6 +55,7 @@ class testApp : public ofBaseApp {
         typingScene				typeScene;
         pongScene				ponger;
         eyeOsc                  oscScene;
+        mouseControl            mouseScene;
 	
 		//------ drawing
 		void drawHelp();
