@@ -54,6 +54,9 @@ void mouseControl::setup(){
     off.r=255;
     off.g=0;
     off.b=0;
+    
+    myMouse.x = ofGetWidth()/2;
+    myMouse.y = ofGetHeight()/2;
 }
 
 void mouseControl::update(ofPoint myMouse){
