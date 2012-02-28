@@ -20,25 +20,27 @@
 #include "ofxXmlSettings.h"
 #include "baseScene.h"
 
+#ifdef TARGET_OSX
 extern "C" {
 #include "speak.h"
 };
+#endif
 
 
 class typingScene : public baseScene{
-	
+
 public:
-	
+
 	void setup();
 	void update(float mouseX, float mouseY);
 	void draw();
 	void printMessageHistory();
-	
+
 	buttonTrigger	doneButton;
-	
+
 	bool bSpeakWords;
-	
-	
+
+
 	vector <buttonTrigger> letterButtons;
 	string * buttons;
 	vector <string> letterButtons_lower;
@@ -48,15 +50,15 @@ public:
 	vector<buttonToggle> actionButtons;
 	string displayMessage;
 	int carriageReturnCounter;
-	
+
 	ofTrueTypeFont  franklinBook;
 	ofTrueTypeFont  franklinBookSmall;
 	ofTrueTypeFont	verdana;
 	ofTrueTypeFont  franklinBookLarge;
 	bool shiftOn;
-	
+
 private:
 	void typedMessage(string msg);
-	
+
 };
 

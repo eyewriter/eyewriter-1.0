@@ -15,35 +15,35 @@
 class groupCollection{
 
 	public:
-	
-	//VECTOR INHERITED 
-	
+
+	//VECTOR INHERITED
+
 	//--------------------------------
 	void clear(){
 		groups.clear();
 	}
 
-	//--------------------------------	
-	strokeGroup & operator[]( const uint i ) {
+	//--------------------------------
+	strokeGroup & operator[]( const unsigned int i ) {
        if( groups.size() == 0 ){
 			addGroup();
 	   }
-	   
+
 	   int index = ofClamp(i, 0, groups.size());
 	   return groups[index];
     }
-	
+
 	//--------------------------------
-	uint size(){
+	unsigned int size(){
 		return groups.size();
 	}
-	
+
 	//--------------------------------
 	strokeGroup & back(){
 		if( groups.size() == 0 ){
 			addGroup();
 	   }
-	   
+
 	   return groups.back();
 	}
 
@@ -51,15 +51,15 @@ class groupCollection{
 	vector <strokeGroup> & getVector(){
 		return groups;
 	}
-	
-	
-	//STROKE GROUP SPECIFIC 
+
+
+	//STROKE GROUP SPECIFIC
 
 	//---------------------------------------------
 	void addGroup(){
 		groups.push_back(strokeGroup());
 	}
-		
+
 	//---------------------------------------------
 	bool hasPoints(){
 		for(int i = 0; i < groups.size(); i++){
