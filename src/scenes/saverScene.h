@@ -31,7 +31,7 @@
 #include "baseScene.h"
 
 //#include "simpleFtpUpload.h"
-#include "ofxDirList.h"
+//#include "ofxDirList.h"
 
 class saverScene : public baseScene{
 

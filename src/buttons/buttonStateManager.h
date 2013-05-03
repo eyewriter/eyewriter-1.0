@@ -67,7 +67,7 @@ class buttonStateManager{
 			
 			if( ptHistory.size() ){
 				
-				ofVec2f averagePos = 0.0f;
+				ofVec2f averagePos = ofVec2f(0.0f, 0.0f);
 				
 				float oldestPoint = ptHistory[0].t;
 				if( ofGetElapsedTimef() - oldestPoint <= waitTime){

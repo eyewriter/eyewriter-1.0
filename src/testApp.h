@@ -11,7 +11,7 @@
 #include "pongScene.h"
 #include "eyePlotterTestApp.h"
 #include "eyeOsc.h"
-#include "mouseControl.h"
+//#include "mouseControl.h"
 
 
 enum{
@@ -55,7 +55,7 @@ class testApp : public ofBaseApp {
         typingScene				typeScene;
         pongScene				ponger;
         eyeOsc                  oscScene;
-        mouseControl            mouseScene;
+        //mouseControl            mouseScene;
 	
 		//------ drawing
 		void drawHelp();

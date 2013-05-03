@@ -165,8 +165,8 @@ void drawingScene::update(float mouseX, float mouseY){
 		//if we have more than 2 points check to see if the current point is close enough to the first point to close it completely
 		if( groups.back().getLastStrokeNumPoints() >= 3 ){
 			
-			ofxPoint2f point = groups.back().strokes.back().pts[0];
-			ofxPoint2f mouse(mx, my);
+			ofPoint point = groups.back().strokes.back().pts[0];
+			ofPoint mouse(mx, my);
 			
 			if( point.distance(mouse) <= 12 ){
 				mx = point.x;

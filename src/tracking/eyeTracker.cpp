@@ -2,7 +2,6 @@
 
 
 #include "FitEllipse.h"
-#include "ofxPoint2f.h"
 
 //==========================================================
 // solve_ellipse
@@ -82,7 +81,7 @@ void eyeTracker::setup(int width, int height){
 	edgeMaskInverted.allocate(w,h);
 	
 	threshold			= 60;
-	currentEyePoint		= 0;
+	currentEyePoint.set( 0 , 0 );
 	
 	// filtering: 
 	bUseGamma			= false;
@@ -316,7 +315,7 @@ void eyeTracker::update(ofxCvGrayscaleImage & grayImgFromCam, float threshold, f
 		 
 			int resolution = 24;
 			
-			ofxPoint2f ptsForRotation[resolution];
+			ofPoint ptsForRotation[24];
 			//ofVec2f ptsForRotation[resolution];
 			
 			for (int i=0; i<resolution; i++){
@@ -328,7 +327,7 @@ void eyeTracker::update(ofxCvGrayscaleImage & grayImgFromCam, float threshold, f
 			
 			for (int i=0; i<resolution; i++){
 				//ptsForRotation[i].rotate(theta * RAD_TO_DEG, ofxPoint2f(cx, cy));
-                ptsForRotation[i].rotate(theta * RAD_TO_DEG, ofxPoint2f(cx, cy));
+                ptsForRotation[i].rotate(theta * RAD_TO_DEG, ofPoint(cx, cy));
 			}
 			
 			currentEyePoint.set(cx, cy);
@@ -365,7 +364,7 @@ void eyeTracker::draw(float x, float y, float totalWidth, float totalHeight){
 		threshImg.draw(threshImg.width, 0);
 		contourFinder.draw(threshImg.width, 0);
 		
-		if( currentEyePoint != 0 ){
+		if( currentEyePoint.x != 0 && currentEyePoint.y != 0 ){
 			ofPushStyle();
 				ofFill();
 				ofSetColor(0, 0, 255);
