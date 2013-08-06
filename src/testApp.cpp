@@ -33,6 +33,7 @@ void testApp::setup(){
 	eyeSmoothed.set(0,0,0);	
 	
     bMouseSimulation = false;
+    bMouseEyeInputSimulation = false;
 }
 
 //--------------------------------------------------------------

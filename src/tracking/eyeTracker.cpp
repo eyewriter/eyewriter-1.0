@@ -106,7 +106,11 @@ void eyeTracker::setup(int width, int height){
 	edgeMaskInnerRadius = 250;
 	edgeMaskOuterRadius = 350;
 	edgeMaskPixels = new unsigned char [ (int)(w * h) ];
-	
+
+	// compactness test
+	bUseCompactnessTest = false;
+	maxCompactness = 0; // what would be a reasonable initial value for that?
+
 	calculateEdgePixels();
 
 }
