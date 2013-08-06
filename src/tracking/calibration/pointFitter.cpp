@@ -8,8 +8,8 @@ void pointFitter::setup(int _nDivisionsWidth, int _nDivisionsHeight) {
 	nDivisionsHeight = _nDivisionsHeight;
 	
 	nPtsInPoints.assign(nDivisionsWidth * nDivisionsHeight , 0);
-	referencePoints.assign(nDivisionsWidth * nDivisionsHeight , 0);
-	pointsFromls.assign(nDivisionsWidth * nDivisionsHeight , 0);
+	referencePoints.assign(nDivisionsWidth * nDivisionsHeight , ofPoint(0));
+	pointsFromls.assign(nDivisionsWidth * nDivisionsHeight , ofPoint(0));
 
 	inputCount = 6;
 	outputCount = 2;
