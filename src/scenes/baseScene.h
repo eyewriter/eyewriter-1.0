@@ -11,7 +11,7 @@
 
 #include "ofMain.h"
 #include "buttonRect.h"
-#include "defines.h"
+#include "eyePlotter/defines.h"
 
 class baseScene{
 

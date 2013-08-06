@@ -79,7 +79,10 @@ void eyeTracker::setup(int width, int height){
 	threshImg.allocate(w, h);
 	edgeMask.allocate(w, h);
 	edgeMaskInverted.allocate(w,h);
-	
+
+	eyeTrackedEllipse.imageWidth = w;
+	eyeTrackedEllipse.imageHeight = h;
+
 	threshold			= 60;
 	currentEyePoint.set( 0 , 0 );
 	
@@ -106,7 +109,11 @@ void eyeTracker::setup(int width, int height){
 	edgeMaskInnerRadius = 250;
 	edgeMaskOuterRadius = 350;
 	edgeMaskPixels = new unsigned char [ (int)(w * h) ];
-	
+
+	// compactness test
+	bUseCompactnessTest = false;
+	maxCompactness = 0; // what would be a reasonable initial value for that?
+
 	calculateEdgePixels();
 
 }
