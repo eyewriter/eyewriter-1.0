@@ -9,9 +9,12 @@
 class eyeEllipse {
 	
 	public:
-	
-	float getWidth(){	return 640; }
-	float getHeight(){	return 480; }
+
+	int imageWidth;
+	int imageHeight;
+
+	float getWidth(){	return imageWidth; }
+	float getHeight(){	return imageHeight; }
 	float ellipseParam[5];	// ellipse parameters...
 	
 	void draw(float x, float y){

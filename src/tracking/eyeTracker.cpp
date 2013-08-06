@@ -79,7 +79,10 @@ void eyeTracker::setup(int width, int height){
 	threshImg.allocate(w, h);
 	edgeMask.allocate(w, h);
 	edgeMaskInverted.allocate(w,h);
-	
+
+	eyeTrackedEllipse.imageWidth = w;
+	eyeTrackedEllipse.imageHeight = h;
+
 	threshold			= 60;
 	currentEyePoint.set( 0 , 0 );
 	
