@@ -72,10 +72,10 @@ void inputManager::update(){
 	
 	
 	if (mode == INPUT_LIVE_VIDEO){
-		vidGrabber.grabFrame();
+		vidGrabber.update();
 		bIsFrameNew = vidGrabber.isFrameNew();
 	} else {
-		vidPlayer.idleMovie();
+		vidPlayer.update();
 		bIsFrameNew = vidPlayer.isFrameNew();
 	}
 	
